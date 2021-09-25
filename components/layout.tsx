@@ -34,7 +34,7 @@ export default function Layout({
           <>
             <Image
               priority
-              src="/images/profile.jpg"
+              src="/images/JoeDuncko2019Square.jpg"
               height={144}
               width={144}
               alt={name}
@@ -47,7 +47,7 @@ export default function Layout({
               <a>
                 <Image
                   priority
-                  src="/images/profile.jpg"
+                  src="/images/JoeDuncko2019Square.jpg"
                   height={108}
                   width={108}
                   alt={name}
