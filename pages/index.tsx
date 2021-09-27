@@ -2,7 +2,7 @@ import { GetStaticProps } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import Date from "../components/date";
-import Layout, { siteTitle } from "../components/layout";
+import Layout, { description, siteTitle } from "../components/layout";
 import { getSortedPostsData } from "../lib/posts";
 
 export default function Home({
@@ -19,12 +19,8 @@ export default function Home({
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section>
-        <p>[Your Self Introduction]</p>
-        <p>
-          (This is a sample website - you’ll be building a site like this in{" "}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
-        </p>
+      <section className="flex flex-col items-center">
+        <p>{description}</p>
       </section>
       <section>
         <h2>Blog</h2>
