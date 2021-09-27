@@ -82,8 +82,8 @@ export default function Layout({
         </div>
       )}
 
-      <footer className="max-w-screen-lg flex">
-        <div className="flex-1">
+      <footer className="max-w-screen-lg sm:flex">
+        <div className="text-center sm:text-left flex-1">
           {/* Fix height */}
           <FontAwesomeIcon icon={faCopyright} /> Joe Duncko{" "}
           {new Date().getFullYear()}
