@@ -23,7 +23,7 @@ export default function Layout({
   home?: boolean;
 }) {
   return (
-    <div className="max-w-screen-lg m-auto">
+    <div className="max-w-screen-lg m-auto p-4">
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content={description} />
