@@ -1,11 +1,9 @@
-import { format } from "date-fns";
 import { GetStaticProps } from "next";
 import Head from "next/head";
 import Link from "next/link";
-import DataCard from "../components/dataCard";
 import Date from "../components/date";
+import Experiences from "../components/experiences";
 import Layout, { description, siteTitle } from "../components/layout";
-import { experiences } from "../data/experiences";
 import { getSortedPostsData } from "../lib/posts";
 
 export default function Home({
@@ -29,38 +27,7 @@ export default function Home({
 
       <div className="sm:flex">
         <div className="flex-1">
-          <DataCard title="Experience">
-            <ol>
-              {experiences.map(
-                ({ title, description, company, startDate, endDate }) => (
-                  <li className="mb-2">
-                    <h4>
-                      <b>{title}</b> @<br />
-                      <a href={company.link} title={`To ${company.name}`}>
-                        {company.name}
-                      </a>
-                    </h4>
-                    <span className="block">{company.location}</span>
-                    <span className="block">
-                      <time dateTime={startDate.toISOString()}>
-                        {format(startDate, "MMMM y")}
-                      </time>{" "}
-                      -{" "}
-                      {endDate ? (
-                        <time dateTime={endDate.toISOString()}>
-                          {format(endDate, "MMMM y")}
-                        </time>
-                      ) : (
-                        "Present"
-                      )}
-                    </span>
-
-                    <p>{description}</p>
-                  </li>
-                )
-              )}
-            </ol>
-          </DataCard>
+          <Experiences />
         </div>
         <div className="flex-1">right</div>
       </div>
