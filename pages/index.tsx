@@ -3,7 +3,11 @@ import Head from "next/head";
 import Link from "next/link";
 import Date from "../components/date";
 import Experiences from "../components/experiences";
+import Interests from "../components/interests";
 import Layout, { description, siteTitle } from "../components/layout";
+import Memberships from "../components/memberships";
+import Projects from "../components/projects";
+import Socials from "../components/socials";
 import { getSortedPostsData } from "../lib/posts";
 
 export default function Home({
@@ -29,7 +33,12 @@ export default function Home({
         <div className="flex-1">
           <Experiences />
         </div>
-        <div className="flex-1">right</div>
+        <div className="flex-1">
+          <Memberships />
+          <Projects />
+          <Interests />
+          <Socials />
+        </div>
       </div>
 
       <section>

@@ -1,4 +1,4 @@
-type Interest = {
+export type Interest = {
   name: string;
   description: string;
 };
