@@ -2,6 +2,7 @@ import { GetStaticProps } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import Date from "../components/date";
+import Education from "../components/education";
 import Experiences from "../components/experiences";
 import Interests from "../components/interests";
 import Layout, { description, siteTitle } from "../components/layout";
@@ -34,6 +35,7 @@ export default function Home({
           <Experiences />
         </div>
         <div className="flex-1">
+          <Education />
           <Memberships />
           <Projects />
           <Interests />
