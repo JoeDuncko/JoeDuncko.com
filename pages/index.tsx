@@ -31,10 +31,10 @@ export default function Home({
       </section>
 
       <div className="sm:flex">
-        <div className="flex-1">
+        <div className="flex-1 sm:mr-4">
           <Experiences />
         </div>
-        <div className="flex-1">
+        <div className="flex-1 sm:ml-4">
           <Education />
           <Memberships />
           <Projects />

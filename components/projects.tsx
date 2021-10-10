@@ -3,7 +3,7 @@ import { projects } from "../data/projects";
 
 export default function Projects() {
   return (
-    <DataCard title="Projects">
+    <DataCard title="Select Projects">
       <ul>
         {projects.map((project) => (
           <li>
