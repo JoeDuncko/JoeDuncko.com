@@ -38,7 +38,7 @@ export const experiences: Experience[] = [
     company: {
       name: "The Event Discovery Company",
       location: "Youngstown, Ohio",
-      link: "https://eventdiscovery.company/",
+      // link: "https://eventdiscovery.company/", // site is dead
     },
     startDate: new Date("2017-10"), // TODO: get real date
     endDate: new Date("2020-3-1"),
