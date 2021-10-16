@@ -1,6 +1,7 @@
 import { GetStaticProps } from "next";
 import Head from "next/head";
 import Link from "next/link";
+import Contact from "../components/contact";
 import Date from "../components/date";
 import Education from "../components/education";
 import Experiences from "../components/experiences";
@@ -40,6 +41,7 @@ export default function Home({
           <Projects />
           <Interests />
           <Socials />
+          <Contact />
         </div>
       </div>
 

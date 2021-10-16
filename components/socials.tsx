@@ -7,7 +7,7 @@ export default function Socials() {
     <DataCard title="Socials">
       <ul>
         {socials.map((social) => (
-          <li>
+          <li className="mb-2">
             <a href={social.link} title={`To Joe Duncko's ${social.name}`}>
               <FontAwesomeIcon icon={social.icon} /> {social.name}
             </a>

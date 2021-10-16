@@ -6,7 +6,7 @@ export default function Projects() {
     <DataCard title="Select Projects">
       <ul>
         {projects.map((project) => (
-          <li>
+          <li className="mb-2">
             <a href={project.link} title={`To ${project.name}`}>
               {project.name}
             </a>
