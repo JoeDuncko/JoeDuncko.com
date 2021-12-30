@@ -1,5 +1,6 @@
 import DataCard from "../components/dataCard";
 import { projects } from "../data/projects";
+import ExternalLink from "./externalLink";
 
 export default function Projects() {
   return (
@@ -7,9 +8,9 @@ export default function Projects() {
       <ul>
         {projects.map((project) => (
           <li className="mb-2">
-            <a href={project.link} title={`To ${project.name}`}>
+            <ExternalLink href={project.link} title={`To ${project.name}`}>
               <h4 className="inline">{project.name}</h4>
-            </a>
+            </ExternalLink>
             , {project.description}
           </li>
         ))}

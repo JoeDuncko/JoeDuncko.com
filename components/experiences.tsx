@@ -1,6 +1,7 @@
 import { format } from "date-fns";
 import DataCard from "../components/dataCard";
 import { Experience as ExperienceType, experiences } from "../data/experiences";
+import ExternalLink from "./externalLink";
 
 function Experience({ experience }: { experience: ExperienceType }) {
   const { title, description, company, startDate, endDate } = experience;
@@ -9,9 +10,13 @@ function Experience({ experience }: { experience: ExperienceType }) {
     <li className="mb-2">
       <h4>
         <b>{title}</b> @<br />
-        <a href={company.link} title={`To ${company.name}`}>
-          {company.name}
-        </a>
+        {company.link ? (
+          <ExternalLink href={company.link} title={`To ${company.name}`}>
+            {company.name}
+          </ExternalLink>
+        ) : (
+          company.name
+        )}
       </h4>
 
       <span className="block">{company.location}</span>

@@ -5,12 +5,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default function ExternalLink({
   children,
   href,
+  title,
 }: {
   children;
   href: string;
+  title: string;
 }) {
   return (
-    <a href={href}>
+    <a href={href} title={title}>
       {children}
       <FontAwesomeIcon
         icon={faExternalLinkAlt}
