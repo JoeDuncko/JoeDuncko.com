@@ -29,7 +29,7 @@ export default function ExternalLink({
           left: "5px",
           top: "-5px",
           fontSize: "0.8rem",
-          color: isHovered ? "lightblue" : null,
+          color: isHovered ? "lightblue" : null, // TODO: do this in a more tailwind-y way
         }}
       />
     </a>
