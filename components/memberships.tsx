@@ -6,7 +6,7 @@ export default function Memberships() {
     <DataCard title="Memberships">
       <ul>
         {memberships.map((membership) => (
-          <li className="mb-2">
+          <li key={membership.name} className="mb-2">
             <a href={membership.link} title={`To ${membership.name}`}>
               {membership.name} ({membership.position})
             </a>

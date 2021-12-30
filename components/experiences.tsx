@@ -44,9 +44,14 @@ export default function Experiences() {
   return (
     <DataCard title="Experience">
       <ol>
-        {experiences.map((experience) => (
-          <Experience experience={experience} />
-        ))}
+        {experiences.map(
+          (
+            experience,
+            index // using index as a key here since I've worked at the same place multiple times. I don't plan on reordering this list, so this should be fine
+          ) => (
+            <Experience key={index} experience={experience} />
+          )
+        )}
       </ol>
     </DataCard>
   );

@@ -6,7 +6,7 @@ export default function Interests() {
     <DataCard title="Interests">
       <ul>
         {interests.map((interest) => (
-          <li className="mb-2">
+          <li key={interest.name} className="mb-2">
             <h4 className="inline">{interest.name}</h4> ({interest.description})
           </li>
         ))}

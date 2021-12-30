@@ -22,6 +22,10 @@ export default function Layout({
   children: React.ReactNode;
   home?: boolean;
 }) {
+  const print = () => {
+    window.print();
+  };
+
   return (
     <div className="max-w-screen-lg m-auto p-4">
       <Head>
@@ -96,9 +100,9 @@ export default function Layout({
           >
             <FontAwesomeIcon icon={faCodeBranch} />
           </a>
-          <a href="javascript:window.print()" className="m-1">
+          <button onClick={print} className="m-1">
             <FontAwesomeIcon icon={faPrint} />
-          </a>
+          </button>
           <a
             href="https://simpleanalytics.com/joeduncko.com?utm_source=joeduncko.com"
             className="m-1"
