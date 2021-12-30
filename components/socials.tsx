@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import DataCard from "../components/dataCard";
 import { socials } from "../data/socials";
+import ExternalLink from "./externalLink";
 
 export default function Socials() {
   return (
@@ -8,9 +9,12 @@ export default function Socials() {
       <ul>
         {socials.map((social) => (
           <li className="mb-2">
-            <a href={social.link} title={`To Joe Duncko's ${social.name}`}>
+            <ExternalLink
+              href={social.link}
+              title={`To Joe Duncko's ${social.name}`}
+            >
               <FontAwesomeIcon icon={social.icon} /> {social.name}
-            </a>
+            </ExternalLink>
           </li>
         ))}
       </ul>

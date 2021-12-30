@@ -7,7 +7,7 @@ export default function Interests() {
       <ul>
         {interests.map((interest) => (
           <li className="mb-2">
-            {interest.name} ({interest.description})
+            <h4 className="inline">{interest.name}</h4> ({interest.description})
           </li>
         ))}
       </ul>
