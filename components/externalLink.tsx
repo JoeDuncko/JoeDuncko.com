@@ -26,10 +26,10 @@ export default function ExternalLink({
         icon={faExternalLinkAlt}
         className="relative"
         style={{
-          left: "5px",
-          top: "-5px",
-          fontSize: "0.8rem",
-          color: isHovered ? "lightblue" : null, // TODO: do this in a more tailwind-y way
+          left: "0.2em",
+          top: "-1em",
+          fontSize: "0.5em",
+          color: isHovered ? "aqua" : null, // TODO: do this in a more tailwind-y way
         }}
       />
     </a>

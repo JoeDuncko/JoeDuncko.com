@@ -1,5 +1,6 @@
 import DataCard from "../components/dataCard";
 import { memberships } from "../data/memberships";
+import ExternalLink from "./externalLink";
 
 export default function Memberships() {
   return (
@@ -7,9 +8,13 @@ export default function Memberships() {
       <ul>
         {memberships.map((membership) => (
           <li key={membership.name} className="mb-2">
-            <a href={membership.link} title={`To ${membership.name}`}>
-              {membership.name} ({membership.position})
-            </a>
+            <ExternalLink
+              href={membership.link}
+              title={`To ${membership.name}`}
+            >
+              {membership.name}
+            </ExternalLink>{" "}
+            ({membership.position})
           </li>
         ))}
       </ul>
