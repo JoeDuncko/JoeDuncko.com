@@ -1,12 +1,10 @@
 import { GetStaticProps } from "next";
 import Head from "next/head";
-import Link from "next/link";
 import Contact from "../components/contact";
-import Date from "../components/date";
 import Education from "../components/education";
 import Experiences from "../components/experiences";
 import Interests from "../components/interests";
-import Layout, { description, siteTitle } from "../components/layout";
+import Layout, { siteTitle } from "../components/layout";
 import Memberships from "../components/memberships";
 import Projects from "../components/projects";
 import Socials from "../components/socials";
@@ -27,10 +25,6 @@ export default function Home({
         <title>{siteTitle}</title>
       </Head>
 
-      <section className="flex flex-col items-center">
-        <p>{description}</p>
-      </section>
-
       <div className="sm:flex">
         <div className="flex-1 sm:mr-4">
           <Experiences />
@@ -45,7 +39,7 @@ export default function Home({
         </div>
       </div>
 
-      <section>
+      {/* <section>
         <h2>Blog</h2>
         <ul>
           {allPostsData.map(({ id, date, title }) => (
@@ -60,7 +54,7 @@ export default function Home({
             </li>
           ))}
         </ul>
-      </section>
+      </section> */}
     </Layout>
   );
 }
