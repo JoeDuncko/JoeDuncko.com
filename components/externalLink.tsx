@@ -20,6 +20,7 @@ export default function ExternalLink({
       title={title}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      target="_blank"
     >
       {children}
       <FontAwesomeIcon
