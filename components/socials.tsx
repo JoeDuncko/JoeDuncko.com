@@ -3,9 +3,9 @@ import DataCard from "../components/dataCard";
 import { socials } from "../data/socials";
 import ExternalLink from "./externalLink";
 
-export default function Socials() {
+export default function Socials({ className }: { className?: string }) {
   return (
-    <DataCard title="Socials">
+    <DataCard className={className} title="Socials">
       <ul>
         {socials.map((social) => (
           <li key={social.name} className="mb-2">

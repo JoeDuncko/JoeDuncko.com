@@ -3,9 +3,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import DataCard from "../components/dataCard";
 import ExternalLink from "./externalLink";
 
-export default function Contact() {
+export default function Contact({ className }: { className?: string }) {
   return (
-    <DataCard title="Contact">
+    <DataCard className={className} title="Contact">
       <ul>
         <li>
           <ExternalLink

@@ -34,8 +34,8 @@ export default function Home({
           <Memberships />
           <Projects />
           <Interests />
-          <Socials />
-          <Contact />
+          <Socials className="print:hidden" />
+          <Contact className="print:hidden" />
         </div>
       </div>
 
