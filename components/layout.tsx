@@ -41,7 +41,8 @@ export default function Layout({
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
-      <header className="flex flex-col items-center mb-4">
+      {/* TODO: move this, don't hide it when printing other pages */}
+      <header className="flex flex-col items-center mb-4 print:hidden">
         {home ? (
           <>
             <Image
@@ -80,9 +81,7 @@ export default function Layout({
           </>
         )}
       </header>
-
       <main>{children}</main>
-
       {!home && (
         <div>
           <Link href="/">
@@ -90,7 +89,6 @@ export default function Layout({
           </Link>
         </div>
       )}
-
       <footer className="max-w-screen-lg sm:flex text-xs print:hidden">
         <div className="text-center sm:text-left flex-1">
           {/* Fix height */}

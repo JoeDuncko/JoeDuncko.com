@@ -1,3 +1,4 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { GetStaticProps } from "next";
 import Head from "next/head";
 import Contact from "../components/contact";
@@ -8,6 +9,7 @@ import Layout, { siteTitle } from "../components/layout";
 import Memberships from "../components/memberships";
 import Projects from "../components/projects";
 import Socials from "../components/socials";
+import { socials } from "../data/socials";
 import { getSortedPostsData } from "../lib/posts";
 
 export default function Home({
@@ -24,6 +26,27 @@ export default function Home({
       <Head>
         <title>{siteTitle}</title>
       </Head>
+
+      {/* TODO: move this to its own component */}
+      <div className="mb-4 hidden justify-between print:flex">
+        <div>
+          <h1 className="text-4xl">Joe Duncko</h1>
+        </div>
+        <div>
+          <div className="text-right">
+            personal@JoeDuncko.com | (330) 719 - 1223 | JoeDuncko.com
+          </div>
+          <div className="text-right">
+            {socials.map((social, i, array) => (
+              <>
+                <FontAwesomeIcon icon={social.icon} />{" "}
+                {social.printFriendlyLabel}
+                {i !== array.length - 1 && " | "}
+              </>
+            ))}
+          </div>
+        </div>
+      </div>
 
       <div className="sm:flex print:flex print:min-w-[960px]">
         <div className="flex-1 sm:mr-4">
