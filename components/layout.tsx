@@ -91,7 +91,7 @@ export default function Layout({
         </div>
       )}
 
-      <footer className="max-w-screen-lg sm:flex text-xs">
+      <footer className="max-w-screen-lg sm:flex text-xs print:hidden">
         <div className="text-center sm:text-left flex-1">
           {/* Fix height */}
           <FontAwesomeIcon icon={faCopyright} /> Joe Duncko{" "}
