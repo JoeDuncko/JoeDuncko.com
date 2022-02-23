@@ -25,7 +25,7 @@ export default function Home({
         <title>{siteTitle}</title>
       </Head>
 
-      <div className="sm:flex">
+      <div className="sm:flex print:flex print:min-w-[960px]">
         <div className="flex-1 sm:mr-4">
           <Experiences />
         </div>
