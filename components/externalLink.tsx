@@ -25,7 +25,7 @@ export default function ExternalLink({
       {children}
       <FontAwesomeIcon
         icon={faExternalLinkAlt}
-        className="relative"
+        className="relative print:hidden"
         style={{
           left: "0.2em",
           top: "-1em",
