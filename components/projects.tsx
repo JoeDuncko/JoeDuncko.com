@@ -12,6 +12,9 @@ export default function Projects() {
               <h4 className="inline">{project.name}</h4>
             </ExternalLink>
             , {project.description}
+            <div className="hidden print:block">
+              <i>{project.link}</i>
+            </div>
           </li>
         ))}
       </ul>
