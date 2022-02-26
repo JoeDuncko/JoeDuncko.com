@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { GetStaticProps } from "next";
 import Head from "next/head";
+import React from "react";
 import Contact from "../components/contact";
 import Education from "../components/education";
 import Experiences from "../components/experiences";
@@ -38,11 +39,11 @@ export default function Home({
           </div>
           <div className="text-right">
             {socials.map((social, i, array) => (
-              <>
+              <React.Fragment key={social.name}>
                 <FontAwesomeIcon icon={social.icon} />{" "}
                 {social.printFriendlyLabel}
                 {i !== array.length - 1 && " | "}
-              </>
+              </React.Fragment>
             ))}
           </div>
         </div>
