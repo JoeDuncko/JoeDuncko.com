@@ -31,7 +31,7 @@ export default function Home({
       {/* Wrapper that sets print width for whole resume */}
       <div className="print:min-w-[960px]">
         {/* TODO: move this to its own component */}
-        <div className="mb-4 hidden justify-between print:flex">
+        <div className="mb-4 hidden justify-between print:flex text-sm">
           <div>
             <h1 className="text-4xl">Joe Duncko</h1>
           </div>
