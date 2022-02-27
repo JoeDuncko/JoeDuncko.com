@@ -8,32 +8,38 @@ function Experience({ experience }: { experience: ExperienceType }) {
 
   return (
     <li className="mb-2">
-      <h4>
-        <b>{title}</b> @<br />
-        {company.link ? (
-          <ExternalLink href={company.link} title={`To ${company.name}`}>
-            {company.name}
-          </ExternalLink>
-        ) : (
-          company.name
-        )}
-      </h4>
+      <div className="flex mb-1">
+        <div className="flex-grow">
+          <h4>
+            <b>{title}</b> @<br />
+            {company.link ? (
+              <ExternalLink href={company.link} title={`To ${company.name}`}>
+                {company.name}
+              </ExternalLink>
+            ) : (
+              company.name
+            )}
+          </h4>
+        </div>
 
-      <span className="block">{company.location}</span>
+        <div className="text-right text-sm text-gray-500">
+          <span className="block">{company.location}</span>
 
-      <span className="block">
-        <time dateTime={startDate.toISOString()}>
-          {format(startDate, "MMMM y")}
-        </time>{" "}
-        -{" "}
-        {endDate ? (
-          <time dateTime={endDate.toISOString()}>
-            {format(endDate, "MMMM y")}
-          </time>
-        ) : (
-          "Present"
-        )}
-      </span>
+          <span className="block">
+            <time dateTime={startDate.toISOString()}>
+              {format(startDate, "MMM y")}
+            </time>{" "}
+            -{" "}
+            {endDate ? (
+              <time dateTime={endDate.toISOString()}>
+                {format(endDate, "MMM y")}
+              </time>
+            ) : (
+              "Present"
+            )}
+          </span>
+        </div>
+      </div>
 
       <p>{description}</p>
     </li>

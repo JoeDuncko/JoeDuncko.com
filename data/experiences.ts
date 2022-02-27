@@ -15,7 +15,7 @@ export const experiences: Experience[] = [
     title: "Senior Front-End Engineer",
     company: {
       name: "BlastPoint",
-      location: "Pittsburgh, Pennsylvania",
+      location: "Pittsburgh, PA",
       link: "https://blastpoint.com/",
     },
     startDate: new Date("2021-10-6"),
@@ -25,7 +25,7 @@ export const experiences: Experience[] = [
     title: "Software Engineer",
     company: {
       name: "BrdgAI",
-      location: "Pittsburgh, Pennsylvania",
+      location: "Pittsburgh, PA",
       link: "https://brdg.ai/",
     },
     startDate: new Date("2020-1-2"), // TODO: check this date
@@ -37,7 +37,7 @@ export const experiences: Experience[] = [
     title: "Co-Founder, CEO",
     company: {
       name: "The Event Discovery Company",
-      location: "Youngstown, Ohio",
+      location: "Youngstown, OH",
       // link: "https://eventdiscovery.company/", // site is dead
     },
     startDate: new Date("2017-10"), // TODO: get real date
@@ -49,7 +49,7 @@ export const experiences: Experience[] = [
     title: "Talent Development Coordinator",
     company: {
       name: "Drund",
-      location: "Boardman, Ohio",
+      location: "Youngstown, OH",
       link: "https://drund.com/",
     },
     startDate: new Date("2017-8"), // TODO: get real date
@@ -61,7 +61,7 @@ export const experiences: Experience[] = [
     title: "Frontend Engineer",
     company: {
       name: "Drund",
-      location: "Boardman, Ohio",
+      location: "Youngstown, OH",
       link: "https://drund.com/",
     },
     startDate: new Date("2016-2-9"),
@@ -73,7 +73,7 @@ export const experiences: Experience[] = [
     title: "Software Development Intern",
     company: {
       name: "Flashstarts",
-      location: "Cleveland, Ohio",
+      location: "Cleveland, OH",
       link: "http://flashstarts.com/",
     },
     startDate: new Date("2015-5-19"),
@@ -85,7 +85,7 @@ export const experiences: Experience[] = [
     title: "Student Web Developer",
     company: {
       name: "Youngstown State University",
-      location: "Youngstown, Ohio",
+      location: "Youngstown, OH",
       link: "https://ysu.edu/",
     },
     startDate: new Date("2013-9"), // TODO: get real date
@@ -97,7 +97,7 @@ export const experiences: Experience[] = [
     title: "Joe",
     company: {
       name: "Joe's PC Services",
-      location: "Canfield, Ohio",
+      location: "Canfield, OH",
     },
     startDate: new Date("2010"),
     endDate: new Date("2015"),
