@@ -100,6 +100,7 @@ export default function Layout({
           <a
             href="https://github.com/JoeDuncko/JoeDuncko.github.io"
             className="m-1"
+            target="_blank"
           >
             <FontAwesomeIcon icon={faCodeBranch} />
           </a>
@@ -109,6 +110,7 @@ export default function Layout({
           <a
             href="https://simpleanalytics.com/joeduncko.com?utm_source=joeduncko.com"
             className="m-1"
+            target="_blank"
           >
             <FontAwesomeIcon icon={faChartBar} />
           </a>
