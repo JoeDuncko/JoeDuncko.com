@@ -1,2 +1,8 @@
 # JoeDuncko.com
-My personal website
+
+My website, built via next.js + tailwind.css. Hosted on Vercel.
+
+## Developing
+
+- `npm install`
+- `npm run dev`
