@@ -98,7 +98,7 @@ export default function Layout({
 
         <div className="text-center flex-1">
           <a
-            href="https://github.com/JoeDuncko/JoeDuncko.github.io"
+            href="https://github.com/JoeDuncko/joeduncko.com"
             className="m-1"
             target="_blank"
           >
