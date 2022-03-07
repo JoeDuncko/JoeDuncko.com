@@ -51,7 +51,7 @@ export default function Home({
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row print:flex-row gap-8">
+        <div className="flex flex-col md:flex-row print:flex-row md:gap-8">
           <div className="flex-1">
             <Experiences />
           </div>
