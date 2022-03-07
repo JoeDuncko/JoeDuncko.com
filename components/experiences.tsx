@@ -26,12 +26,14 @@ function Experience({ experience }: { experience: ExperienceType }) {
           <span className="block">{company.location}</span>
 
           <span className="block">
-            <time dateTime={startDate.toISOString()}>
+            {/* Inline-block helps not break between years and months on mobile, see
+            https://stackoverflow.com/questions/18222409/specifying-a-preferred-line-break-point-in-html-text-in-a-responsive-design */}
+            <time dateTime={startDate.toISOString()} className="inline-block">
               {format(startDate, "MMM y")}
             </time>{" "}
             -{" "}
             {endDate ? (
-              <time dateTime={endDate.toISOString()}>
+              <time dateTime={endDate.toISOString()} className="inline-block">
                 {format(endDate, "MMM y")}
               </time>
             ) : (
