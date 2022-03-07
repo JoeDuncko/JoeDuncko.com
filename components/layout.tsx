@@ -89,7 +89,7 @@ export default function Layout({
           </Link>
         </div>
       )}
-      <footer className="max-w-screen-lg sm:flex text-xs print:hidden">
+      <footer className="max-w-screen-lg sm:flex text-xs print:hidden items-center">
         <div className="text-center sm:text-left flex-1">
           {/* Fix height */}
           <FontAwesomeIcon icon={faCopyright} /> Joe Duncko{" "}
@@ -98,7 +98,7 @@ export default function Layout({
 
         <div className="text-center flex-1">
           <a
-            href="https://github.com/JoeDuncko/JoeDuncko.github.io"
+            href="https://github.com/JoeDuncko/joeduncko.com"
             className="m-1"
             target="_blank"
           >
