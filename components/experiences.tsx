@@ -8,7 +8,7 @@ function Experience({ experience }: { experience: ExperienceType }) {
 
   return (
     <li className="mb-2">
-      <div className="flex mb-1">
+      <div className="flex mb-1 gap-4">
         <div className="flex-grow">
           <h4>
             <b>{title}</b> @<br />
