@@ -22,7 +22,8 @@ export const experiences: Experience[] = [
       link: "https://blastpoint.com/",
     },
     startDate: parse("2021-10-06", "y-M-d", new Date()),
-    description: "",
+    description:
+      "Helping Blastpoint adopt the latest frontend technologies and best practices for its customer intelligence platform.",
   },
   {
     title: "Software Engineer",
