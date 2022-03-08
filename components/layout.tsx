@@ -11,10 +11,6 @@ export default function Layout({
   children: React.ReactNode;
   home?: boolean;
 }) {
-  const print = () => {
-    window.print();
-  };
-
   return (
     <div className="max-w-screen-lg m-auto p-4">
       <Head>
