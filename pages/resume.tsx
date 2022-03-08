@@ -14,7 +14,7 @@ import { socials } from "../data/socials";
 
 export default function Resume() {
   return (
-    <Layout home>
+    <Layout>
       <Head>
         <title>{siteTitle}</title>
       </Head>

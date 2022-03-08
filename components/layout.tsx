@@ -1,16 +1,9 @@
 import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
-import { description, name, siteTitle } from "../constants";
+import { description, siteTitle } from "../constants";
 import Footer from "./footer";
+import Header from "./header";
 
-export default function Layout({
-  children,
-  home,
-}: {
-  children: React.ReactNode;
-  home?: boolean;
-}) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="max-w-screen-lg m-auto p-4">
       <Head>
@@ -26,54 +19,9 @@ export default function Layout({
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
-      {/* TODO: move this, don't hide it when printing other pages */}
-      <header className="flex flex-col items-center mb-4 print:hidden">
-        {home ? (
-          <>
-            <Image
-              priority
-              className="rounded-full"
-              src="/images/JoeDuncko2019Square.jpg"
-              height={144}
-              width={144}
-              alt={name}
-            />
-            <h1 className="text-4xl">{name}</h1>
+      <Header />
 
-            <section className="flex flex-col items-center text-center">
-              <p>{description}</p>
-            </section>
-          </>
-        ) : (
-          <>
-            <Link href="/">
-              <a>
-                <Image
-                  priority
-                  className="rounded-full"
-                  src="/images/JoeDuncko2019Square.jpg"
-                  height={108}
-                  width={108}
-                  alt={name}
-                />
-              </a>
-            </Link>
-            <h2>
-              <Link href="/">
-                <a>{name}</a>
-              </Link>
-            </h2>
-          </>
-        )}
-      </header>
       <main>{children}</main>
-      {!home && (
-        <div>
-          <Link href="/">
-            <a>← Back to home</a>
-          </Link>
-        </div>
-      )}
 
       <Footer />
     </div>
