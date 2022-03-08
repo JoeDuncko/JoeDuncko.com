@@ -1,13 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import { description, name, siteTitle } from "../constants";
 import Footer from "./footer";
-
-const name = "Joe Duncko";
-export const description =
-  "Product-obsessed frontend engineer and community organizer";
-const catchPhrase = "let's create together";
-export const siteTitle = `${name} | ${catchPhrase}`;
 
 export default function Layout({
   children,

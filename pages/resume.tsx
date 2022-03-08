@@ -5,10 +5,11 @@ import Contact from "../components/contact";
 import Education from "../components/education";
 import Experiences from "../components/experiences";
 import Interests from "../components/interests";
-import Layout, { siteTitle } from "../components/layout";
+import Layout from "../components/layout";
 import Memberships from "../components/memberships";
 import Projects from "../components/projects";
 import Socials from "../components/socials";
+import { siteTitle } from "../constants";
 import { socials } from "../data/socials";
 
 export default function Resume() {

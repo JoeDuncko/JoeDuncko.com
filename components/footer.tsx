@@ -5,12 +5,7 @@ import {
   faPrint,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-const name = "Joe Duncko";
-export const description =
-  "Product-obsessed frontend engineer and community organizer";
-const catchPhrase = "let's create together";
-export const siteTitle = `${name} | ${catchPhrase}`;
+import { catchPhrase, name } from "../constants";
 
 export default function Footer() {
   const print = () => {
@@ -20,8 +15,7 @@ export default function Footer() {
   return (
     <footer className="max-w-screen-lg sm:flex text-xs print:hidden items-center">
       <div className="text-center sm:text-left flex-1">
-        <FontAwesomeIcon icon={faCopyright} /> Joe Duncko{" "}
-        {new Date().getFullYear()}
+        <FontAwesomeIcon icon={faCopyright} /> {name} {new Date().getFullYear()}
       </div>
 
       <div className="text-center flex-1">
@@ -45,7 +39,7 @@ export default function Footer() {
       </div>
 
       <div className="text-right flex-1">
-        <em>let's create, together</em>
+        <em>{catchPhrase}</em>
       </div>
     </footer>
   );
