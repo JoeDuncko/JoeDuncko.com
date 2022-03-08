@@ -10,11 +10,12 @@ export type Experience = {
   startDate: Date;
   endDate?: Date;
   description: string;
+  hideWhenPrinting?: boolean;
 };
 
 export const experiences: Experience[] = [
   {
-    title: "Senior Front-End Engineer",
+    title: "Senior Frontend Engineer",
     company: {
       name: "BlastPoint",
       location: "Pittsburgh, PA",
@@ -94,6 +95,7 @@ export const experiences: Experience[] = [
     endDate: parse("2015-02", "y-M", new Date()), // TODO: get real date
     description:
       "Created an information organization system for the Youngstown State University's Undergraduate web Bulletin. This involved writing custom Drupal plugins and themes in PHP.",
+    hideWhenPrinting: true,
   },
   {
     title: "Joe",
@@ -105,5 +107,6 @@ export const experiences: Experience[] = [
     endDate: parse("2015", "y", new Date()),
     description:
       "Branded, marketed, and carried out computer maintenance, phone repair, and website administration and creation services to over 100 unique customers while in high school.",
+    hideWhenPrinting: true,
   },
 ];

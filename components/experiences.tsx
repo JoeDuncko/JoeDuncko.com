@@ -1,13 +1,15 @@
+import classNames from "classnames";
 import { format } from "date-fns";
 import DataCard from "../components/dataCard";
 import { Experience as ExperienceType, experiences } from "../data/experiences";
 import ExternalLink from "./externalLink";
 
 function Experience({ experience }: { experience: ExperienceType }) {
-  const { title, description, company, startDate, endDate } = experience;
+  const { title, description, company, startDate, endDate, hideWhenPrinting } =
+    experience;
 
   return (
-    <li className="mb-2">
+    <li className={classNames("mb-2", hideWhenPrinting && "print:hidden")}>
       <div className="flex mb-1 gap-4">
         <div className="flex-grow">
           <h4>
