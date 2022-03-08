@@ -1,7 +1,8 @@
 import { GetStaticProps } from "next";
 import Head from "next/head";
 import React from "react";
-import Layout, { siteTitle } from "../components/layout";
+import Layout from "../components/layout";
+import { siteTitle } from "../constants";
 import { getSortedPostsData } from "../lib/posts";
 
 export default function Home({
