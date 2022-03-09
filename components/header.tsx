@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { description, name } from "../constants";
 
 export default function Header() {
@@ -16,6 +17,26 @@ export default function Header() {
 
       <section className="flex flex-col items-center text-center">
         <p>{description}</p>
+      </section>
+      <section>
+        <ul className="flex flex-row items-center text-center gap-8">
+          {/* TODO: highlight the active page */}
+          <li>
+            <Link href="/">
+              <a>Home</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/resume">
+              <a>Resume</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/blog">
+              <a>Blog</a>
+            </Link>
+          </li>
+        </ul>
       </section>
     </header>
   );
