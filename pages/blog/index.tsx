@@ -1,7 +1,9 @@
+import { GetStaticProps } from "next";
 import Head from "next/head";
-import React from "react";
+import Link from "next/link";
 import Layout from "../../components/layout";
 import { siteTitle } from "../../constants";
+import { getSortedPostsData } from "../../lib/posts";
 
 export default function Blog({
   allPostsData,
@@ -20,20 +22,29 @@ export default function Blog({
 
       <section>
         <h2>Blog</h2>
-        {/* <ul>
+        <ul>
           {allPostsData.map(({ id, date, title }) => (
             <li key={id}>
-              <Link href={`/blog/posts/${id}`}>
+              <Link href={`/blog/${id}`}>
                 <a>{title}</a>
               </Link>
               <br />
-              <small>
+              {/* <small>
                 <Date dateString={date} />
-              </small>
+              </small> */}
             </li>
           ))}
-        </ul> */}
+        </ul>
       </section>
     </Layout>
   );
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  const allPostsData = getSortedPostsData();
+  return {
+    props: {
+      allPostsData,
+    },
+  };
+};
