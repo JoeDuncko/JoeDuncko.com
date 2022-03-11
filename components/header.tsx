@@ -13,11 +13,13 @@ export default function Header() {
         width={144}
         alt={name}
       />
+
       <h1 className="text-4xl">{name}</h1>
 
       <section className="flex flex-col items-center text-center">
         <p>{description}</p>
       </section>
+
       <section>
         <ul className="flex flex-row items-center text-center gap-8">
           {/* TODO: highlight the active page */}
