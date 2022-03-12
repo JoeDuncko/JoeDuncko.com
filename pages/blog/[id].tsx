@@ -3,6 +3,7 @@ import Head from "next/head";
 import Date from "../../components/date";
 import Layout from "../../components/layout";
 import { getAllPostIds, getPostData } from "../../lib/posts";
+import markdownStyles from "./markdown-styles.module.css";
 
 export default function Post({
   postData,
@@ -18,12 +19,16 @@ export default function Post({
       <Head>
         <title>{postData.title}</title>
       </Head>
-      <article>
-        <h1>{postData.title}</h1>
-        <div>
+
+      <article className="max-w-3xl m-auto">
+        <div className="mb-2">
+          <h1 className="text-5xl">{postData.title}</h1>
           <Date dateString={postData.date} />
         </div>
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <div
+          className={markdownStyles["markdown"]}
+          dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+        />
       </article>
     </Layout>
   );
