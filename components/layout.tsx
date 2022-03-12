@@ -21,7 +21,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
       <Header />
 
-      <main className="flex-grow">{children}</main>
+      <main className="flex-grow flex flex-col">{children}</main>
 
       <Footer />
     </div>

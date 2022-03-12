@@ -17,7 +17,8 @@ export default function Blog({ allPosts }: Props) {
       </Head>
 
       <section>
-        <h2>Blog</h2>
+        <h1>Blog</h1>
+
         <ul>
           {allPosts.map(({ slug, date, title }) => (
             <li key={slug}>
