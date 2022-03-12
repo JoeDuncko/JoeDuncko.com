@@ -5,7 +5,7 @@ import Header from "./header";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="max-w-screen-lg m-auto p-4">
+    <div className="max-w-screen-lg m-auto p-4 pb-1 min-h-screen flex flex-col">
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content={description} />
@@ -21,7 +21,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
       <Header />
 
-      <main>{children}</main>
+      <main className="flex-grow">{children}</main>
 
       <Footer />
     </div>
