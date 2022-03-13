@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 
 // TODO: make this type more flexible so that it can take anything a link can
-export default function ExternalLink({
+export function ExternalLink({
   children,
   href,
   title,

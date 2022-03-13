@@ -1,10 +1,10 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
-import Date from "../../components/date";
-import Layout from "../../components/layout";
+import { Date } from "../../components/date";
+import { Layout } from "../../components/layout";
 import { getAllPosts, getPostBySlug } from "../../lib/api";
 import markdownToHtml from "../../lib/markdownToHtml";
-import PostType from "../../types/post";
+import { Post as PostType } from "../../types/post";
 import markdownStyles from "./markdown-styles.module.css";
 
 type Props = {

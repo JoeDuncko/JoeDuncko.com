@@ -1,8 +1,8 @@
-import DataCard from "../components/dataCard";
+import { DataCard } from "../components/dataCard";
 import { projects } from "../data/projects";
-import ExternalLink from "./externalLink";
+import { ExternalLink } from "./externalLink";
 
-export default function Projects() {
+export function Projects() {
   return (
     <DataCard title="Select Projects">
       <ul>

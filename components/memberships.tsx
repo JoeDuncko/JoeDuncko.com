@@ -1,8 +1,8 @@
-import DataCard from "../components/dataCard";
+import { DataCard } from "../components/dataCard";
 import { memberships } from "../data/memberships";
-import ExternalLink from "./externalLink";
+import { ExternalLink } from "./externalLink";
 
-export default function Memberships() {
+export function Memberships() {
   return (
     <DataCard title="Memberships">
       <ul>

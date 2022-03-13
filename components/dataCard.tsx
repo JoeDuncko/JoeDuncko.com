@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import { ReactNode } from "react";
 
-export default function DataCard({
+export function DataCard({
   title,
   children,
   className,

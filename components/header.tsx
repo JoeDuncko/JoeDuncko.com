@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { description, name } from "../constants";
 
-export default function Header() {
+export function Header() {
   return (
     <header className="flex flex-col items-center mb-4 print:hidden">
       <nav className="mb-8">

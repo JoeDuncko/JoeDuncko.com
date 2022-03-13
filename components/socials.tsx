@@ -1,9 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import DataCard from "../components/dataCard";
+import { DataCard } from "../components/dataCard";
 import { socials } from "../data/socials";
-import ExternalLink from "./externalLink";
+import { ExternalLink } from "./externalLink";
 
-export default function Socials({ className }: { className?: string }) {
+export function Socials({ className }: { className?: string }) {
   return (
     <DataCard className={className} title="Socials">
       <ul>

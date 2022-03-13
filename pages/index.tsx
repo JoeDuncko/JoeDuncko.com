@@ -2,12 +2,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Head from "next/head";
 import Link from "next/link";
 import React from "react";
-import Date from "../components/date";
-import Layout from "../components/layout";
+import { Date } from "../components/date";
+import { Layout } from "../components/layout";
 import { siteTitle } from "../constants";
 import { socials } from "../data/socials";
 import { getAllPosts } from "../lib/api";
-import Post from "../types/post";
+import { Post } from "../types/post";
 
 type Props = {
   allPosts: Post[];

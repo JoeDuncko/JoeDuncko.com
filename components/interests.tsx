@@ -1,7 +1,7 @@
-import DataCard from "../components/dataCard";
+import { DataCard } from "../components/dataCard";
 import { interests } from "../data/interests";
 
-export default function Interests() {
+export function Interests() {
   return (
     <DataCard title="Interests">
       <ul>

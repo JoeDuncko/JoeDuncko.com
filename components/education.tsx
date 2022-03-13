@@ -1,6 +1,6 @@
-import DataCard from "../components/dataCard";
+import { DataCard } from "../components/dataCard";
 
-export default function Education() {
+export function Education() {
   return (
     <DataCard title="Education">
       <p>

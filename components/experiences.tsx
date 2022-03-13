@@ -1,8 +1,8 @@
 import classNames from "classnames";
 import { format } from "date-fns";
-import DataCard from "../components/dataCard";
+import { DataCard } from "../components/dataCard";
 import { Experience as ExperienceType, experiences } from "../data/experiences";
-import ExternalLink from "./externalLink";
+import { ExternalLink } from "./externalLink";
 
 function Experience({ experience }: { experience: ExperienceType }) {
   const { title, description, company, startDate, endDate, hideWhenPrinting } =
@@ -50,7 +50,7 @@ function Experience({ experience }: { experience: ExperienceType }) {
   );
 }
 
-export default function Experiences() {
+export function Experiences() {
   return (
     <DataCard title="Experience">
       <ol>

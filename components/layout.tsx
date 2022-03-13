@@ -1,9 +1,9 @@
 import Head from "next/head";
 import { description, siteTitle } from "../constants";
-import Footer from "./footer";
-import Header from "./header";
+import { Footer } from "./footer";
+import { Header } from "./header";
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="max-w-screen-lg m-auto p-4 pb-1 min-h-screen flex flex-col">
       <Head>

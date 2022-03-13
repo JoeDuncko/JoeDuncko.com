@@ -1,9 +1,9 @@
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import DataCard from "../components/dataCard";
-import ExternalLink from "./externalLink";
+import { DataCard } from "../components/dataCard";
+import { ExternalLink } from "./externalLink";
 
-export default function Contact({ className }: { className?: string }) {
+export function Contact({ className }: { className?: string }) {
   return (
     <DataCard className={className} title="Contact">
       <ul>

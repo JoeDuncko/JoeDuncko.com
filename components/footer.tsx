@@ -7,7 +7,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { catchPhrase, name } from "../constants";
 
-export default function Footer() {
+export function Footer() {
   const print = () => {
     window.print();
   };
