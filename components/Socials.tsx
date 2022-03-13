@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { DataCard } from "../components/dataCard";
+import { DataCard } from "../components/DataCard";
 import { socials } from "../data/socials";
-import { ExternalLink } from "./externalLink";
+import { ExternalLink } from "./ExternalLink";
 
 export function Socials({ className }: { className?: string }) {
   return (

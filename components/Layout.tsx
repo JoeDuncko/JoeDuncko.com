@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { description, siteTitle } from "../constants";
-import { Footer } from "./footer";
-import { Header } from "./header";
+import { Footer } from "./Footer";
+import { Header } from "./Header";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
