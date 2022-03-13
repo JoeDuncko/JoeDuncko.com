@@ -8,7 +8,6 @@ import { siteTitle } from "../constants";
 import { socials } from "../data/socials";
 import { getAllPosts } from "../lib/api";
 import Post from "../types/post";
-import markdownStyles from "./blog/markdown-styles.module.css";
 
 type Props = {
   allPosts: Post[];
@@ -41,23 +40,23 @@ export default function Home({ allPosts }: Props) {
         <section className="mb-8">
           <br />
 
-          <h2>Blog</h2>
+          <h2 className="mb-2 text-2xl">Blog</h2>
 
-          <div>
-            {allPosts.map(({ slug, date, title, content }) => (
-              <div key={slug}>
+          <div className="flex flex-nowrap overflow-scroll">
+            {allPosts.map(({ slug, date, title, excerpt }) => (
+              <div
+                key={slug}
+                className="w-48 basis-48 flex-grow-0 flex-shrink-0"
+              >
                 <div>
                   <Link href={`/blog/${slug}`}>
-                    <h3>{title}</h3>
+                    <h3 className="text-xl">{title}</h3>
                   </Link>
                   <small>
                     <Date dateString={date} />
                   </small>
                 </div>
-                <div
-                  className={markdownStyles["markdown"]}
-                  dangerouslySetInnerHTML={{ __html: content }}
-                />
+                <p>{excerpt}</p>
               </div>
             ))}
           </div>
