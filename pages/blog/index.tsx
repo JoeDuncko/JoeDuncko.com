@@ -1,3 +1,5 @@
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Head from "next/head";
 import Link from "next/link";
 import { Date } from "../../components/Date";
@@ -22,16 +24,22 @@ export default function Blog({ allPosts }: Props) {
 
         <div>
           {allPosts.map(({ slug, date, title, excerpt }) => (
-            <div key={slug}>
-              <Link href={`/blog/${slug}`}>
-                <a>
-                  <h2 className="text-3xl">{title}</h2>
-                </a>
-              </Link>
+            <div key={slug} className="relative">
+              <h2 className="text-3xl">{title}</h2>
+
               <small>
                 <Date dateString={date} />
               </small>
               <p>{excerpt}</p>
+              <div className="text-right">
+                <small>
+                  <Link href={`/blog/${slug}`}>
+                    <a className="after:absolute after:inset-0 hover:underline">
+                      Read More <FontAwesomeIcon icon={faArrowRight} />
+                    </a>
+                  </Link>
+                </small>
+              </div>
             </div>
           ))}
         </div>
