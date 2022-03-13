@@ -1,5 +1,6 @@
 ---
 title: "Hello world"
+excerpt: "Welcome to my new website!"
 date: "2021-09-25"
 ---
 
