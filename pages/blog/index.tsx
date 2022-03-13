@@ -17,7 +17,7 @@ export default function Blog({ allPosts }: Props) {
         <title>{siteTitle}</title>
       </Head>
 
-      <section className="max-w-3xl mx-auto">
+      <section className="max-w-3xl w-full mx-auto">
         <h1 className="text-5xl mb-2">Blog</h1>
 
         <div>
