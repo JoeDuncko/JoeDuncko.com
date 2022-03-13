@@ -24,7 +24,9 @@ export default function Blog({ allPosts }: Props) {
           {allPosts.map(({ slug, date, title, excerpt }) => (
             <div key={slug}>
               <Link href={`/blog/${slug}`}>
-                <h2 className="text-3xl">{title}</h2>
+                <a>
+                  <h2 className="text-3xl">{title}</h2>
+                </a>
               </Link>
               <small>
                 <Date dateString={date} />

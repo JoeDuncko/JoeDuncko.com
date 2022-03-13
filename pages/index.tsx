@@ -50,7 +50,9 @@ export default function Home({ allPosts }: Props) {
               >
                 <div>
                   <Link href={`/blog/${slug}`}>
-                    <h3 className="text-xl">{title}</h3>
+                    <a>
+                      <h3 className="text-xl">{title}</h3>
+                    </a>
                   </Link>
                   <small>
                     <Date dateString={date} />
