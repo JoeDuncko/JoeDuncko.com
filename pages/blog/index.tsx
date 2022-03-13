@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import Date from "../../components/date";
 import Layout from "../../components/layout";
 import { siteTitle } from "../../constants";
 import { getAllPosts } from "../../lib/api";
@@ -16,22 +17,22 @@ export default function Blog({ allPosts }: Props) {
         <title>{siteTitle}</title>
       </Head>
 
-      <section>
-        <h1>Blog</h1>
+      <section className="max-w-3xl mx-auto">
+        <h1 className="text-5xl mb-2">Blog</h1>
 
-        <ul>
-          {allPosts.map(({ slug, date, title }) => (
-            <li key={slug}>
+        <div>
+          {allPosts.map(({ slug, date, title, excerpt }) => (
+            <div key={slug}>
               <Link href={`/blog/${slug}`}>
-                <a>{title}</a>
+                <h2 className="text-3xl">{title}</h2>
               </Link>
-              <br />
-              {/* <small>
+              <small>
                 <Date dateString={date} />
-              </small> */}
-            </li>
+              </small>
+              <p>{excerpt}</p>
+            </div>
           ))}
-        </ul>
+        </div>
       </section>
     </Layout>
   );

@@ -27,7 +27,7 @@ export default function Post({ post, morePosts, preview }: Props) {
         <title>{post.title}</title>
       </Head>
 
-      <article className="max-w-3xl m-auto">
+      <article className="max-w-3xl mx-auto">
         <div className="mb-2">
           <h1 className="text-5xl">{post.title}</h1>
           <Date dateString={post.date} />
