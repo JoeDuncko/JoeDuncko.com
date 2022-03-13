@@ -1,4 +1,4 @@
-import { DataCard } from "../components/dataCard";
+import { DataCard } from "../components/DataCard";
 import { interests } from "../data/interests";
 
 export function Interests() {

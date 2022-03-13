@@ -1,14 +1,14 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Head from "next/head";
 import React from "react";
-import { Contact } from "../components/contact";
-import { Education } from "../components/education";
-import { Experiences } from "../components/experiences";
-import { Interests } from "../components/interests";
-import { Layout } from "../components/layout";
-import { Memberships } from "../components/memberships";
-import { Projects } from "../components/projects";
-import { Socials } from "../components/socials";
+import { Contact } from "../components/Contact";
+import { Education } from "../components/Education";
+import { Experiences } from "../components/Experiences";
+import { Interests } from "../components/Interests";
+import { Layout } from "../components/Layout";
+import { Memberships } from "../components/Memberships";
+import { Projects } from "../components/Projects";
+import { Socials } from "../components/Socials";
 import { siteTitle } from "../constants";
 import { socials } from "../data/socials";
 

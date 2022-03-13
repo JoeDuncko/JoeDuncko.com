@@ -1,4 +1,4 @@
-import { DataCard } from "../components/dataCard";
+import { DataCard } from "../components/DataCard";
 
 export function Education() {
   return (

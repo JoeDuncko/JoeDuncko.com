@@ -1,6 +1,6 @@
-import { DataCard } from "../components/dataCard";
+import { DataCard } from "../components/DataCard";
 import { memberships } from "../data/memberships";
-import { ExternalLink } from "./externalLink";
+import { ExternalLink } from "./ExternalLink";
 
 export function Memberships() {
   return (

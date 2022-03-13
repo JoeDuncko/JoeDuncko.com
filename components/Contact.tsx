@@ -1,7 +1,7 @@
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { DataCard } from "../components/dataCard";
-import { ExternalLink } from "./externalLink";
+import { DataCard } from "../components/DataCard";
+import { ExternalLink } from "./ExternalLink";
 
 export function Contact({ className }: { className?: string }) {
   return (

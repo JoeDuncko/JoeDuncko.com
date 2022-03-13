@@ -1,6 +1,6 @@
-import { DataCard } from "../components/dataCard";
+import { DataCard } from "../components/DataCard";
 import { projects } from "../data/projects";
-import { ExternalLink } from "./externalLink";
+import { ExternalLink } from "./ExternalLink";
 
 export function Projects() {
   return (
