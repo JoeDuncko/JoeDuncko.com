@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { Date } from "../../components/date";
-import { Layout } from "../../components/layout";
+import { Date } from "../../components/Date";
+import { Layout } from "../../components/Layout";
 import { getAllPosts, getPostBySlug } from "../../lib/api";
 import markdownToHtml from "../../lib/markdownToHtml";
 import { Post as PostType } from "../../types/post";
