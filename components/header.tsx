@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { description, name } from "../constants";
 
 export default function Header() {
@@ -7,21 +8,14 @@ export default function Header() {
     <header className="flex flex-col items-center mb-4 print:hidden">
       <nav className="mb-8">
         <ul className="flex flex-row items-end text-center gap-8">
-          {/* TODO: highlight the active page */}
           <li>
-            <Link href="/">
-              <a>Home</a>
-            </Link>
+            <NavLink href="/">Home</NavLink>
           </li>
           <li>
-            <Link href="/resume">
-              <a>Resume</a>
-            </Link>
+            <NavLink href="/resume">Resume</NavLink>
           </li>
           <li>
-            <Link href="/blog">
-              <a>Blog</a>
-            </Link>
+            <NavLink href="/blog">Blog</NavLink>
           </li>
         </ul>
       </nav>
@@ -43,3 +37,15 @@ export default function Header() {
     </header>
   );
 }
+
+const NavLink = ({ href, children }) => {
+  const router = useRouter();
+
+  return (
+    <Link href={href}>
+      <a className={router.pathname === href ? "font-semibold" : ""}>
+        {children}
+      </a>
+    </Link>
+  );
+};
