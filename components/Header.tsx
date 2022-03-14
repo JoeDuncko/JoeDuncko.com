@@ -1,3 +1,4 @@
+import classnames from "classnames";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -8,15 +9,9 @@ export function Header() {
     <header className="flex flex-col items-center mb-4 print:hidden">
       <nav className="mb-8">
         <ul className="flex flex-row items-end text-center gap-8">
-          <li>
-            <NavLink href="/">Home</NavLink>
-          </li>
-          <li>
-            <NavLink href="/resume">Resume</NavLink>
-          </li>
-          <li>
-            <NavLink href="/blog">Blog</NavLink>
-          </li>
+          <NavLinkListItem href="/">Home</NavLinkListItem>
+          <NavLinkListItem href="/resume">Resume</NavLinkListItem>
+          <NavLinkListItem href="/blog">Blog</NavLinkListItem>
         </ul>
       </nav>
 
@@ -38,14 +33,19 @@ export function Header() {
   );
 }
 
-const NavLink = ({ href, children }) => {
+const NavLinkListItem = ({ href, children }) => {
   const router = useRouter();
 
   return (
-    <Link href={href}>
-      <a className={router.pathname === href ? "font-semibold" : ""}>
-        {children}
-      </a>
-    </Link>
+    <li
+      className={classnames(
+        "hover:underline",
+        router.pathname === href ? "font-semibold" : ""
+      )}
+    >
+      <Link href={href}>
+        <a>{children}</a>
+      </Link>
+    </li>
   );
 };

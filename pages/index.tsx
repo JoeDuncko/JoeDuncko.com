@@ -30,6 +30,7 @@ export default function Home({ allPosts }: Props) {
                   href={social.link}
                   target="_blank"
                   title={`To Joe Duncko's ${social.name}`}
+                  className="hover:text-teal-400"
                 >
                   <FontAwesomeIcon icon={social.icon} />
                 </a>
@@ -47,7 +48,7 @@ export default function Home({ allPosts }: Props) {
             {allPosts.map(({ slug, date, title, excerpt }) => (
               <div
                 key={slug}
-                className="w-48 basis-48 flex-grow-0 flex-shrink-0 relative border-4 border-black rounded-lg p-4"
+                className="w-48 basis-48 flex-grow-0 flex-shrink-0 relative border-4 border-black rounded-lg p-4 hover:bg-slate-100"
               >
                 <div>
                   <h3 className="text-xl">{title}</h3>

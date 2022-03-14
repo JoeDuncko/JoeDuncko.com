@@ -26,7 +26,7 @@ export default function Blog({ allPosts }: Props) {
           {allPosts.map(({ slug, date, title, excerpt }) => (
             <div
               key={slug}
-              className="relative border-4 border-black rounded-lg p-4"
+              className="relative border-4 border-black rounded-lg p-4 hover:bg-slate-100"
             >
               <h2 className="text-3xl">{title}</h2>
 
