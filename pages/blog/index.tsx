@@ -20,11 +20,14 @@ export default function Blog({ allPosts }: Props) {
       </Head>
 
       <section className="max-w-3xl w-full mx-auto">
-        <h1 className="text-5xl mb-2">Blog</h1>
+        <h1 className="text-5xl mb-4">Blog</h1>
 
         <div>
           {allPosts.map(({ slug, date, title, excerpt }) => (
-            <div key={slug} className="relative">
+            <div
+              key={slug}
+              className="relative border-4 border-black rounded-lg p-4"
+            >
               <h2 className="text-3xl">{title}</h2>
 
               <small>

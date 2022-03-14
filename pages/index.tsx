@@ -47,7 +47,7 @@ export default function Home({ allPosts }: Props) {
             {allPosts.map(({ slug, date, title, excerpt }) => (
               <div
                 key={slug}
-                className="w-48 basis-48 flex-grow-0 flex-shrink-0 relative"
+                className="w-48 basis-48 flex-grow-0 flex-shrink-0 relative border-4 border-black rounded-lg p-4"
               >
                 <div>
                   <h3 className="text-xl">{title}</h3>
