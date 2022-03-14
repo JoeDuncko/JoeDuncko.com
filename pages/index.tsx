@@ -1,3 +1,4 @@
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Head from "next/head";
 import Link from "next/link";
@@ -29,6 +30,7 @@ export default function Home({ allPosts }: Props) {
                   href={social.link}
                   target="_blank"
                   title={`To Joe Duncko's ${social.name}`}
+                  className="hover:text-teal-400"
                 >
                   <FontAwesomeIcon icon={social.icon} />
                 </a>
@@ -46,19 +48,25 @@ export default function Home({ allPosts }: Props) {
             {allPosts.map(({ slug, date, title, excerpt }) => (
               <div
                 key={slug}
-                className="w-48 basis-48 flex-grow-0 flex-shrink-0"
+                className="w-48 basis-48 flex-grow-0 flex-shrink-0 relative border-4 border-black rounded-lg p-4 hover:bg-slate-100"
               >
                 <div>
-                  <Link href={`/blog/${slug}`}>
-                    <a>
-                      <h3 className="text-xl">{title}</h3>
-                    </a>
-                  </Link>
+                  <h3 className="text-xl">{title}</h3>
+
                   <small>
                     <Date dateString={date} />
                   </small>
                 </div>
                 <p>{excerpt}</p>
+                <div className="text-right">
+                  <small>
+                    <Link href={`/blog/${slug}`}>
+                      <a className="after:absolute after:inset-0 hover:underline">
+                        Read More <FontAwesomeIcon icon={faArrowRight} />
+                      </a>
+                    </Link>
+                  </small>
+                </div>
               </div>
             ))}
           </div>

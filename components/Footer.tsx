@@ -21,17 +21,17 @@ export function Footer() {
       <div className="text-center flex-1">
         <a
           href="https://github.com/JoeDuncko/joeduncko.com"
-          className="m-1"
+          className="m-1 hover:text-teal-400"
           target="_blank"
         >
           <FontAwesomeIcon icon={faCodeBranch} />
         </a>
-        <button onClick={print} className="m-1">
+        <button onClick={print} className="m-1 hover:text-teal-400">
           <FontAwesomeIcon icon={faPrint} />
         </button>
         <a
           href="https://simpleanalytics.com/joeduncko.com?utm_source=joeduncko.com"
-          className="m-1"
+          className="m-1 hover:text-teal-400"
           target="_blank"
         >
           <FontAwesomeIcon icon={faChartBar} />
