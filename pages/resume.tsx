@@ -7,6 +7,7 @@ import { Experiences } from "../components/Experiences";
 import { Interests } from "../components/Interests";
 import { Layout } from "../components/Layout";
 import { Memberships } from "../components/Memberships";
+import { OpenSourceContributions } from "../components/OpenSourceContributions";
 import { Projects } from "../components/Projects";
 import { Socials } from "../components/Socials";
 import { siteTitle } from "../constants";
@@ -49,6 +50,7 @@ export default function Resume() {
           <div className="flex-1">
             <Education />
             <Memberships />
+            <OpenSourceContributions />
             <Projects />
             <Interests />
             <Socials className="print:hidden" />

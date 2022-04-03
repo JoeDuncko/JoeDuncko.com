@@ -14,7 +14,7 @@ export function Memberships() {
             >
               {membership.name}
             </ExternalLink>{" "}
-            ({membership.position})
+            ({membership.position}): {membership.description}
           </li>
         ))}
       </ul>

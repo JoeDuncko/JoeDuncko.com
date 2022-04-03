@@ -32,12 +32,19 @@ export const interests: Interest[] = [
   },
   {
     name: "Hackathons",
-    description:
-      "Co-founded YSU's, traveled to Yale, Georgia Tech, University of Michigan, University of Cincinnati, and more.", // TODO: add links - via JSX?
+    description: (
+      <>
+        Co-founded{" "}
+        <ExternalLink title="Visit HackYSU" href="https://hackysu.com/">
+          HackYSU
+        </ExternalLink>
+        , traveled to Yale, Georgia Tech, University of Michigan, and more.
+      </>
+    ),
   },
   {
     name: "Startups",
     description:
-      "Former founder, pitched to raise money, interned at a startup accelerator, went through a startup accelerator and Y Combinator's Startup School.",
+      "Former founder, pitched to raise money, interned at a startup accelerator, participated in a startup accelerator and Y Combinator's Startup School.",
   },
 ];
