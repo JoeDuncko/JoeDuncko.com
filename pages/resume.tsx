@@ -1,5 +1,4 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Head from "next/head";
 import React from "react";
 import { Contact } from "../components/Contact";
 import { Education } from "../components/Education";
@@ -10,16 +9,12 @@ import { Memberships } from "../components/Memberships";
 import { OpenSourceContributions } from "../components/OpenSourceContributions";
 import { Projects } from "../components/Projects";
 import { Socials } from "../components/Socials";
-import { siteTitle } from "../constants";
+import { siteDescription } from "../constants";
 import { socials } from "../data/socials";
 
 export default function Resume() {
   return (
-    <Layout>
-      <Head>
-        <title>{siteTitle}</title>
-      </Head>
-
+    <Layout title="Joe Duncko's Resume" description={siteDescription}>
       {/* Wrapper that sets print width for whole resume */}
       <div className="print:min-w-[960px]">
         {/* TODO: move this to its own component */}

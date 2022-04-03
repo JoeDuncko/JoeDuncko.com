@@ -1,4 +1,3 @@
-import Head from "next/head";
 import { useRouter } from "next/router";
 import { Date } from "../../components/Date";
 import { Layout } from "../../components/Layout";
@@ -22,11 +21,10 @@ export default function Post({ post, morePosts, preview }: Props) {
   // }
 
   return (
-    <Layout>
-      <Head>
-        <title>{post.title}</title>
-      </Head>
-
+    <Layout
+      title={`${post.title} | Joe Duncko's Blog`}
+      description={post.excerpt}
+    >
       <article className="max-w-3xl w-full mx-auto">
         <div className="mb-2">
           <h1 className="text-5xl">{post.title}</h1>
