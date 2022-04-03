@@ -1,5 +1,5 @@
 import {
-  faChartBar,
+  faChartLine,
   faCodeBranch,
   faCopyright,
   faPrint,
@@ -34,7 +34,7 @@ export function Footer() {
           className="m-1 hover:text-teal-400"
           target="_blank"
         >
-          <FontAwesomeIcon icon={faChartBar} />
+          <FontAwesomeIcon icon={faChartLine} />
         </a>
       </div>
 
