@@ -2,7 +2,7 @@ import classnames from "classnames";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { description, name } from "../constants";
+import { myName, siteDescription } from "../constants";
 
 export function Header() {
   return (
@@ -21,13 +21,13 @@ export function Header() {
         src="/images/JoeDuncko2019Square.jpg"
         height={144}
         width={144}
-        alt={name}
+        alt={myName}
       />
 
-      <h1 className="text-4xl">{name}</h1>
+      <h1 className="text-4xl">{myName}</h1>
 
       <section className="flex flex-col items-center text-center">
-        <p>{description}</p>
+        <p>{siteDescription}</p>
       </section>
     </header>
   );
