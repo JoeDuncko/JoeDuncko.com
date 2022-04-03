@@ -1,4 +1,4 @@
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Head from "next/head";
 import Link from "next/link";
@@ -36,6 +36,16 @@ export default function Home({ allPosts }: Props) {
                 </a>
               </li>
             ))}
+            <li>
+              <a
+                href={"mailto:personal@JoeDuncko.com"}
+                target="_blank"
+                title={"Email Joe Duncko"}
+                className="hover:text-teal-400"
+              >
+                <FontAwesomeIcon icon={faEnvelope} />
+              </a>
+            </li>
           </ul>
         </section>
 
