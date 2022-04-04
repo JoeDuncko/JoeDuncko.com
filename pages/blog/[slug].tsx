@@ -6,13 +6,7 @@ import markdownToHtml from "../../lib/markdownToHtml";
 import { Post as PostType } from "../../types/post";
 import markdownStyles from "./markdown-styles.module.css";
 
-type Props = {
-  post: PostType;
-  morePosts: PostType[];
-  preview?: boolean;
-};
-
-export default function Post({ post, morePosts, preview }: Props) {
+export default function Post({ post }: { post: PostType }) {
   const router = useRouter();
 
   // IDK why this is here, it was in the example
