@@ -17,7 +17,7 @@ export default function Blog({ allPosts }: Props) {
       <section className="max-w-3xl w-full mx-auto">
         <h1 className="text-5xl mb-4">Blog</h1>
 
-        <div>
+        <div className="flex flex-col gap-4">
           {allPosts.map(({ slug, date, title, excerpt }) => (
             <div
               key={slug}

@@ -8,6 +8,8 @@ I had the opportunity to share [SWBF2.events](https://swbf2.events/), one of my 
 
 SWBF2.events is a tiny progressive web app (PWA) that displays current and upcoming community events in EA Star Wars Battlefront II (2017).
 
+The talk, embedded below, below details some background and motivations, how the site was built, and how I grew the app to over 3,500 unique visitors a month.
+
 ## Video
 
 <div style="aspect-ratio: 16/9;">
