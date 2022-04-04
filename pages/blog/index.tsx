@@ -14,7 +14,7 @@ type Props = {
 export default function Blog({ allPosts }: Props) {
   return (
     <Layout title="Joe Duncko's Blog" description={siteDescription}>
-      <section className="max-w-3xl w-full mx-auto">
+      <section className="max-w-3xl w-full mx-auto mb-8">
         <h1 className="text-5xl mb-4">Blog</h1>
 
         <div className="flex flex-col gap-4">
