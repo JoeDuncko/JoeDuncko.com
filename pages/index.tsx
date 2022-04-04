@@ -49,7 +49,7 @@ export default function Home({ allPosts }: Props) {
 
           <h2 className="mb-2 text-2xl">Blog</h2>
 
-          <div className="flex flex-nowrap overflow-scroll">
+          <div className="flex flex-nowrap overflow-scroll gap-4">
             {allPosts.map(({ slug, date, title, excerpt }) => (
               <div
                 key={slug}
