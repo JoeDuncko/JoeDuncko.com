@@ -28,9 +28,9 @@ This new site is written in Typescript, built with [Next.js](https://nextjs.org/
 
 Typescript was an obvious choice since I wanted my resume to live in javascript objects, and I wanted those javascript objects to have an enforced structure. The hinting also made it super easy to use the resume data in components.
 
-Next.js is the most widely used React framework with Server Side Rendering (SSR), which is more or less necessary to get good SEO and use React at the same time, so it was the easiest choice there. I originally intended to use Next.js's Static Generation feature, but SSR ended up being so fast on Vercel that I decided it wasn't worth figuring that out quite yet.
+Next.js is the most widely used React framework with Server Side Rendering (SSR), which is more or less necessary to get good SEO and use React at the same time, so it was the easiest choice there. Because I don't pull in any data dynamically, I also tap into Next.js's Static Generation feature, for an extra speed increase.
 
-I could have used [Remix](https://remix.run/) if I wanted to be as hip and cool as possible, or [Astro](https://astro.build/) if I wanted to reduce the amount of code that is my responsibility (especially the blog), but I decided to go with the most mature project in the space instead.
+I could have used [Remix](https://remix.run/) if I wanted to be as hip and cool as possible, or [Astro](https://astro.build/) if I wanted to reduce the amount of code that is my responsibility (especially the blog), but I decided to go with the most mature project in the space instead. It definitely helped that there's an [official Next.js w/ static generation + Typescript + Tailwind blog example](https://github.com/vercel/next.js/tree/canary/examples/blog-starter-typescript), which I shamelessly used as a base.
 
 In retrospect, I think I probably should have went with something that managed the blog logic and SEO stuff for me, but that's frustration for future me.
 
