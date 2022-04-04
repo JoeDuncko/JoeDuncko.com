@@ -27,7 +27,7 @@ export function Header() {
       <h1 className="text-4xl">{myName}</h1>
 
       <section className="flex flex-col items-center text-center">
-        <p>{siteDescription}</p>
+        <p className="max-w-sm">{siteDescription}</p>
       </section>
     </header>
   );
