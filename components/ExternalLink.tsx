@@ -30,7 +30,7 @@ export function ExternalLink({
           left: "0.2em",
           top: "-1em",
           fontSize: "0.5em",
-          color: isHovered ? "aqua" : null, // TODO: do this in a more tailwind-y way
+          color: isHovered ? "#00FF33" : null, // TODO: do this in a more tailwind-y way
         }}
       />
     </a>
