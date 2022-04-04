@@ -25,7 +25,7 @@ export default function Home({ allPosts }: Props) {
                   href={social.link}
                   target="_blank"
                   title={`To Joe Duncko's ${social.name}`}
-                  className="hover:text-teal-400"
+                  className="hover:text-[#00FF33]"
                 >
                   <FontAwesomeIcon icon={social.icon} />
                 </a>
@@ -36,7 +36,7 @@ export default function Home({ allPosts }: Props) {
                 href={"mailto:personal@JoeDuncko.com"}
                 target="_blank"
                 title={"Email Joe Duncko"}
-                className="hover:text-teal-400"
+                className="hover:text-[#00FF33]"
               >
                 <FontAwesomeIcon icon={faEnvelope} />
               </a>

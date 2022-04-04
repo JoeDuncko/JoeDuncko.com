@@ -19,7 +19,7 @@
 }
 
 .markdown a {
-  @apply text-teal-400;
+  @apply text-[#00FF33];
 }
 
 .markdown a:hover {
