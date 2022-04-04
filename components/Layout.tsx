@@ -31,7 +31,7 @@ export function Layout({
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content={"https://JoeDuncko.com/" + router.pathname}
+          content={"https://JoeDuncko.com" + router.asPath}
         />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
@@ -41,7 +41,7 @@ export function Layout({
         <meta property="twitter:card" content="summary_large_image" />
         <meta
           property="twitter:url"
-          content={"https://JoeDuncko.com/" + router.pathname}
+          content={"https://JoeDuncko.com" + router.asPath}
         />
         <meta property="twitter:title" content={title} />
         <meta property="twitter:description" content={description} />

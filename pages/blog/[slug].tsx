@@ -1,4 +1,3 @@
-import { useRouter } from "next/router";
 import { Date } from "../../components/Date";
 import { Layout } from "../../components/Layout";
 import { getAllPosts, getPostBySlug } from "../../lib/api";
@@ -7,8 +6,6 @@ import { Post as PostType } from "../../types/post";
 import markdownStyles from "./markdown-styles.module.css";
 
 export default function Post({ post }: { post: PostType }) {
-  const router = useRouter();
-
   // IDK why this is here, it was in the example
   // if (!router.isFallback && !post?.slug) {
   //   return <ErrorPage statusCode={404} />;
@@ -42,13 +39,12 @@ type Params = {
 export async function getStaticProps({ params }: Params) {
   const post = getPostBySlug(params.slug, [
     "title",
+    "excerpt",
     "date",
     "slug",
-    "author",
     "content",
-    "ogImage",
-    "coverImage",
   ]);
+
   const content = await markdownToHtml(post.content || "");
 
   return {
