@@ -1,10 +1,9 @@
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Head from "next/head";
 import Link from "next/link";
 import { Date } from "../../components/Date";
 import { Layout } from "../../components/Layout";
-import { siteTitle } from "../../constants";
+import { siteDescription } from "../../constants";
 import { getAllPosts } from "../../lib/api";
 import { Post } from "../../types/post";
 
@@ -14,15 +13,11 @@ type Props = {
 
 export default function Blog({ allPosts }: Props) {
   return (
-    <Layout>
-      <Head>
-        <title>{siteTitle}</title>
-      </Head>
-
-      <section className="max-w-3xl w-full mx-auto">
+    <Layout title="Joe Duncko's Blog" description={siteDescription}>
+      <section className="max-w-3xl w-full mx-auto mb-8">
         <h1 className="text-5xl mb-4">Blog</h1>
 
-        <div>
+        <div className="flex flex-col gap-4">
           {allPosts.map(({ slug, date, title, excerpt }) => (
             <div
               key={slug}

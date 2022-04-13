@@ -1,11 +1,10 @@
 import { faArrowRight, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Head from "next/head";
 import Link from "next/link";
 import React from "react";
 import { Date } from "../components/Date";
 import { Layout } from "../components/Layout";
-import { siteTitle } from "../constants";
+import { siteDescription, siteTitle } from "../constants";
 import { socials } from "../data/socials";
 import { getAllPosts } from "../lib/api";
 import { Post } from "../types/post";
@@ -16,11 +15,7 @@ type Props = {
 
 export default function Home({ allPosts }: Props) {
   return (
-    <Layout>
-      <Head>
-        <title>{siteTitle}</title>
-      </Head>
-
+    <Layout title={siteTitle} description={siteDescription}>
       <div className="flex flex-col flex-grow">
         <section className="flex-grow">
           <ul className="flex flex-row items-center text-center gap-8 justify-center text-4xl mb-4">
@@ -30,7 +25,7 @@ export default function Home({ allPosts }: Props) {
                   href={social.link}
                   target="_blank"
                   title={`To Joe Duncko's ${social.name}`}
-                  className="hover:text-teal-400"
+                  className="hover:text-[#00FF33]"
                 >
                   <FontAwesomeIcon icon={social.icon} />
                 </a>
@@ -41,7 +36,7 @@ export default function Home({ allPosts }: Props) {
                 href={"mailto:personal@JoeDuncko.com"}
                 target="_blank"
                 title={"Email Joe Duncko"}
-                className="hover:text-teal-400"
+                className="hover:text-[#00FF33]"
               >
                 <FontAwesomeIcon icon={faEnvelope} />
               </a>
@@ -54,7 +49,7 @@ export default function Home({ allPosts }: Props) {
 
           <h2 className="mb-2 text-2xl">Blog</h2>
 
-          <div className="flex flex-nowrap overflow-scroll">
+          <div className="flex flex-nowrap overflow-scroll gap-4">
             {allPosts.map(({ slug, date, title, excerpt }) => (
               <div
                 key={slug}
@@ -87,14 +82,7 @@ export default function Home({ allPosts }: Props) {
 }
 
 export const getStaticProps = async () => {
-  const allPosts = getAllPosts([
-    "title",
-    "date",
-    "slug",
-    "author",
-    "coverImage",
-    "excerpt",
-  ]);
+  const allPosts = getAllPosts(["title", "excerpt", "date", "slug"]);
 
   return {
     props: { allPosts },

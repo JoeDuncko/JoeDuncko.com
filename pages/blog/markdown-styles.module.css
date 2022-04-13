@@ -1,26 +1,33 @@
 .markdown {
   @apply leading-relaxed;
+  @apply mb-5;
 }
 
 .markdown p,
 .markdown ul,
 .markdown ol,
 .markdown blockquote {
-  @apply my-6;
+  @apply mb-2;
 }
 
 .markdown h2 {
-  @apply text-3xl mt-12 mb-4 leading-snug;
+  @apply text-3xl mt-4 mb-2 leading-snug;
 }
 
 .markdown h3 {
-  @apply text-2xl mt-8 mb-4 leading-snug;
+  @apply text-2xl mt-4 mb-2 leading-snug;
 }
 
 .markdown a {
-  @apply text-teal-400;
+  @apply text-[#00FF33];
 }
 
 .markdown a:hover {
   @apply underline;
+}
+
+.markdown ul {
+  @apply list-disc;
+  @apply pl-8;
+  @apply list-inside;
 }
