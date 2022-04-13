@@ -38,6 +38,8 @@ Using Tailwind was a bit of a tossup for me. I knew that I wanted to build out t
 
 There's definitely still some work that can be done to make spacing a bit more consistent across this site, but in the mean time I read [this awesome article by the creator of Tailwind on separation of concerns in CSS](https://adamwathan.me/css-utility-classes-and-separation-of-concerns/).
 
+This is actually the first site I've hosted on Vercel. Typically I use Github Pages and Github Actions, but unfortunately that set up currently forces the developer to place production builds in git somewhere. I don't like that, and I hope GitHub fixes that soon. Until then, Vercel seems to be an excellent host that takes care of build previews, CI, CD, and production builds automatically.
+
 ## Conclusion
 
 Overall, this site is definitely over-engineered, but building it was a great learning experience for me. Now to fill it with content...
