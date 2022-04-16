@@ -40,13 +40,13 @@ For posterity, here's a quick rundown of the previous years' events (some of the
   - Fun facts
     - This was the only year we were able to reimburse non-YSU students for their travel expenses, so we had a very decent number of students travel in
 - HackYSU 2018
-  - Directed by...?
-  - Held in Stambaugh Stadium's DeBartolo Stadium Club
+  - Cancelled due to organizational issues
 - HackYSU 2019
   - Directed by Ralph Streb and Anthony Hake
-  - Held in Kilcawley Center's Cove
+  - Held in Stambaugh Stadium's DeBartolo Stadium Club
 - HackYSU 2020
-  - Cancelled due to COVID 19 virus
+  - Directed by Ralph Streb and Anthony Hake
+  - Held in Kilcawley Center's Cove
 - HackYSU 2021
   - Directed by...?
   - Held virtually on Discord due to COVID 19 virus
