@@ -18,7 +18,7 @@ For posterity, here's a quick rundown of the previous years' events (some of the
   - The first HackYSU
   - Directed by me
   - Took place in Meshel Hall, with presentations in Moser Hall
-  - Supported by Major League Hacking (MLH)
+  - Supported by [Major League Hacking (MLH)](https://mlh.io/)
   - Joint effort between multiple YSU CSIS student organizations (ACM, ISEHA, ITSA)
   - ~65 participants
   - Fun facts
@@ -31,24 +31,27 @@ For posterity, here's a quick rundown of the previous years' events (some of the
   - According to [this article](https://cms.ysu.edu/college-science-technology-engineering-and-mathematics/hackysu-2016) over 100 students participated
   - Fun facts
     - The logo was created by RJ Thomson's design class as part of their curriculum
-    - The website was also created by Shaquille Stoutamire
+    - The website was created by Shaquille Stoutamire
 - [HackYSU 2017](https://hackysu.com/2017/)
   - Last HackYSU directed by me
   - Held in Stambaugh Stadium's DeBartolo Stadium Club
   - Supported by Major League Hacking (MLH)
-  - The biggest HackYSU so far, according to [this article](https://cms.ysu.edu/college-science-technology-engineering-and-mathematics/hackysu-2017) more than 140 students participated, 23 mentors showed up to help, and 26 total projects submitted for judging
+  - According to [this article](https://cms.ysu.edu/college-science-technology-engineering-and-mathematics/hackysu-2017) more than 140 students participated, 23 mentors showed up to help, and 26 projects were submitted for judging
   - Fun facts
-    - This was the only year we were able to reimburse non-YSU students for their travel expenses, so we had a very decent number of students travel in
+    - We were able to reimburse non-YSU students for their travel expenses, so we had a very decent number of students travel in
 - HackYSU 2018
   - Cancelled due to organizational issues
 - HackYSU 2019
-  - Directed by Ralph Streb and Anthony Hake
+  - Co-directed by Ralph Streb and Anthony Hake, with support from Sarah Nadzan
   - Held in Stambaugh Stadium's DeBartolo Stadium Club
+  - ~135 students participated (per Anthony Hake)
+  - Unfortunately, I didn't attend this iteration of the event
 - HackYSU 2020
-  - Directed by Ralph Streb and Anthony Hake
-  - Held in Kilcawley Center's Cove
+  - Co-directed by Ralph Streb and Anthony Hake, with support from Sarah Nadzan and Jake Mauk
+  - Held in Stambaugh Stadium's DeBartolo Stadium Club
+  - ~135 students participated (per Anthony Hake)
 - HackYSU 2021
-  - Directed by...?
+  - Directed by [Ryan Lalchand](https://www.ryanlalchand.com/), with support from Julio, Sam, and Dee
   - Held virtually on Discord due to COVID 19 virus
 
 ## This year's event
@@ -57,13 +60,13 @@ This year's event, HackYSU 2022, brought the event back to Stambaugh Stadium's D
 
 Directed by Ryan Lalchand, the event brought in ~75 local students who submitted 10 projects at the end of the weekend.
 
-It was the first HackYSU held since [YSU Computer Club]() organization name change
+It was the first HackYSU held since the [YSU Computer Club](https://ysucomputerclub.com/) was created, which consumed the Penguin Hackers, Frost Penguins, and ACM.
 
 ## My participation
 
 My participation in HackYSU this year began before the event.
 
-I spent ~24 hours at the event this year,
+I spent ~24 hours at the event this year, SOMETHING SOMETHING
 
 I also gave two talks.
 
