@@ -64,15 +64,15 @@ It was the first HackYSU held since the [YSU Computer Club](https://ysucomputerc
 
 ## My participation
 
-My participation in HackYSU this year began before the event.
+My participation in HackYSU this year began before the event. Ryan and I met several months beforehand, and fortunately hit it off. I'm happy I was able to be available as a resource for him and his team before the event, which I've unfortunately not had the opportunity to do for the other generations of officers.
 
-I spent ~24 hours at the event this year, SOMETHING SOMETHING
+I spent ~24 hours at the event this year - starting with helping with set up, then with helping students, mentors, and sponsors get situated, then finally running around helping out students as a mentor.
 
-I also gave two talks.
+I also gave two talks:
 
 One was the same, very beginner friendly "Let's make your first website!" ([Slides](https://docs.google.com/presentation/d/168yyE5tqMBNJx7G-SVzTy5WAJIgja0inHCVH3ZeWuzo/edit?usp=sharing), [GitHub](https://github.com/JoeDuncko/hackysu-2021-profile)) that I gave last year. That went over pretty well.
 
-The other was a "Let's make an interactive web app with React!" ([Slides](https://docs.google.com/presentation/d/1FAayDa8PsJxnMPNUsAz1c6ZRD5jibYC4Vb9c454VcJM/edit?usp=sharing), [Github](https://github.com/JoeDuncko/hackysu-2022-pokemon)) talk that involved making [a very simple Pokedex](https://hackysu-2022-pokemon.vercel.app/) based off the [PokeAPI](https://pokeapi.co/).
+The other was a "Let's make an interactive web app with React!" ([Slides](https://docs.google.com/presentation/d/1FAayDa8PsJxnMPNUsAz1c6ZRD5jibYC4Vb9c454VcJM/edit?usp=sharing), [GitHub](https://github.com/JoeDuncko/hackysu-2022-pokemon)) talk that involved making [a very simple Pokedex](https://hackysu-2022-pokemon.vercel.app/) based off the [PokeAPI](https://pokeapi.co/).
 
 While I was super happy with the content (it covered some background, initializing Create React App, fetching data from a server, displaying lists of data, handling state, handling inputs, deploying to [Vercel](https://vercel.com/), etc - all the stuff you need to be dangerous with React), the first hour of the talk was trying to help the 5 people who decided to follow along install node. The subsequent three were an unfortunately slow pattern of do a step, help everyone catch up, do a step, help every catch up, over and over again.
 
@@ -82,7 +82,7 @@ Next time I plan on having all the students use CodeSandbox, and I'll use a live
 
 ## Acknowledgements
 
-I think it's important to set aside a little space to acknowledge and thank some people and organizations that have supported HackYSU since the beginning.
+I think it's important to set aside a little space to acknowledge and thank some of the people and organizations that have supported HackYSU since the beginning:
 
 The YSU Student Government was the first organization to officially acknowledge - and then fund - HackYSU. If it wasn't for them, HackYSU wouldn't have been able to establish itself and would never have happened.
 
@@ -93,8 +93,6 @@ The [Youngstown Business Incubator (YBI)](https://ybi.org/) has also consistentl
 I'd also like to thank YSU CSIS's Connie Frisby for helping navigate the chaos that is YSU, generally putting up with me, and not just shutting down the whole HackYSU operation before it could even happen.
 
 I think something also needs to be said about MCCTC's Mike Sekol, who has brought his ridiculously talented students to the last several iterations of the event, and consistently goes above and beyond to support both his students and the event.
-
-Lots of others that unfortunately don't come top of mind
 
 ## Criticisms
 
@@ -108,19 +106,21 @@ Separately, following along with the progress of the planning of the event, it i
 
 Despite there now being precedent for HackYSU to take place at all, it still seems there are people and rules blocking progress around every corner.
 
-As it stands, planning HackYSU takes hundreds of cumulative hours to put on, many of which involve physically running around campus trying to navigate the college's politics.
+As it stands, planning HackYSU takes hundreds of cumulative person hours to put on, many of which involve physically running around campus trying to navigate the college's politics.
 
 If HackYSU dies, it's going to be because the massive effort it takes to put on the event is too much for YSU students - who typically live off campus and work part time - to handle.
 
-The only way for the HackYSU organization team to combat this is by documenting process as much as possible to make it easier for the next generation - something I tried to do during my time as Director, but failed.
+The only way for the HackYSU organization team to combat this is by documenting process as much as possible to make it easier for the next generation - something I tried to do during my time as Director, but failed. Thankfully, that's something that is being worked on as I write this.
 
 That being said, I'd love to see more effort from YSU's side to make this process easier for students, not that I know what that'd look like.
 
 ## Conclusion
 
-A couple days after the event, someone who did HackYSU over the weekend reached out to me.
+A couple days after the event, someone who participated in HackYSU over the weekend reached out to me.
 
-They told me that they shared their project on social media and a Silicon Valley based company reached out with a job offer less than 48 hours later. They said that the encouragement from the event's judges helped them break through their imposter syndrome, and put themselves out there.
+They told me that they shared their project (which was awarded as part of the top 3 HackYSU 2022 projects) on social media and a Silicon Valley based company reached out with a job offer less than 48 hours later.
+
+They said that the encouragement from the event's judges helped them break through their imposter syndrome, and put themselves out there.
 
 It's outcomes like this that prove that hackathons work.
 
