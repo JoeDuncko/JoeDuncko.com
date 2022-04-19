@@ -1,7 +1,7 @@
 ---
 title: "HackYSU 2022 in Review"
 excerpt: "Last weekend was YSU's 7th annual hackathon"
-date: "2022-04-16"
+date: "2022-04-19"
 ---
 
 [HackYSU](https://hackysu.com/) 2022, Youngstown State University's 7th annual hackathon, was held last weekend (April 8th-10th) at Stambaugh Stadium's DeBartolo Stadium Club.
