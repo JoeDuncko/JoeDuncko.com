@@ -24,15 +24,17 @@ export default function Resume() {
           </div>
           <div>
             <div className="text-right">
-              personal@JoeDuncko.com | (330) 719 - 1223 | JoeDuncko.com
+              <a href="mailto:personal@JoeDuncko.com">personal@JoeDuncko.com</a>{" "}
+              | <a href="tel:330-719-1223">(330) 719 - 1223</a> |{" "}
+              <a href="https://joeduncko.com/">JoeDuncko.com</a>
             </div>
             <div className="text-right">
               {socials.map((social, i, array) => (
-                <React.Fragment key={social.name}>
+                <a href={social.link} key={social.name}>
                   <FontAwesomeIcon icon={social.icon} />{" "}
                   {social.printFriendlyLabel}
                   {i !== array.length - 1 && " | "}
-                </React.Fragment>
+                </a>
               ))}
             </div>
           </div>
