@@ -1,8 +1,8 @@
 import { faArrowRight, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Date } from "components/Date";
 import Link from "next/link";
 import React from "react";
-import { Date } from "../components/Date";
 import { Layout } from "../components/Layout";
 import { siteDescription, siteTitle } from "../constants";
 import { socials } from "../data/socials";

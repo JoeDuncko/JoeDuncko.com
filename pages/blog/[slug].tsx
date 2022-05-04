@@ -1,11 +1,9 @@
-import { Date } from "../../components/Date";
+import { Date } from "components/Date";
+import { allPosts } from "contentlayer/generated";
 import { Layout } from "../../components/Layout";
-import { getAllPosts, getPostBySlug } from "../../lib/api";
-import markdownToHtml from "../../lib/markdownToHtml";
-import { Post as PostType } from "../../types/post";
 import markdownStyles from "./markdown-styles.module.css";
 
-export default function Post({ post }: { post: PostType }) {
+export default function Post({ post }) {
   // IDK why this is here, it was in the example
   // if (!router.isFallback && !post?.slug) {
   //   return <ErrorPage statusCode={404} />;
@@ -23,51 +21,26 @@ export default function Post({ post }: { post: PostType }) {
         </div>
         <div
           className={markdownStyles["markdown"]}
-          dangerouslySetInnerHTML={{ __html: post.content }}
+          dangerouslySetInnerHTML={{ __html: post.body.html }}
         />
       </article>
     </Layout>
   );
 }
 
-type Params = {
-  params: {
-    slug: string;
-  };
-};
-
-export async function getStaticProps({ params }: Params) {
-  const post = getPostBySlug(params.slug, [
-    "title",
-    "excerpt",
-    "date",
-    "slug",
-    "content",
-  ]);
-
-  const content = await markdownToHtml(post.content || "");
-
+export async function getStaticPaths() {
+  const paths = allPosts.map((post) => post.url);
   return {
-    props: {
-      post: {
-        ...post,
-        content,
-      },
-    },
+    paths,
+    fallback: false,
   };
 }
 
-export async function getStaticPaths() {
-  const posts = getAllPosts(["slug"]);
-
+export async function getStaticProps({ params }) {
+  const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
   return {
-    paths: posts.map((post) => {
-      return {
-        params: {
-          slug: post.slug,
-        },
-      };
-    }),
-    fallback: false,
+    props: {
+      post,
+    },
   };
 }

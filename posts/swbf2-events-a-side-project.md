@@ -1,7 +1,7 @@
 ---
 title: "SWBF2.events - A Side Project"
 excerpt: "From idea to 3,500 unique visitors a month."
-date: "2021-08-24"
+date: 2021-08-24
 ---
 
 I had the opportunity to share [SWBF2.events](https://swbf2.events/), one of my side projects, at [Code Youngstown's annual Lightning Talk event at Westside Bowl on August 24th, 2021](https://www.meetup.com/Code-Youngstown/events/279804695/).

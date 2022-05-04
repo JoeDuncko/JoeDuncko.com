@@ -1,7 +1,7 @@
 ---
 title: "Hello world"
 excerpt: "Welcome to my new website! Let's talk about it a bit."
-date: "2022-04-01"
+date: 2022-04-01
 ---
 
 Welcome to my new website! Let's talk about it a bit.
