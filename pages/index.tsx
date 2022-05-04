@@ -1,7 +1,7 @@
 import { faArrowRight, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Date as DateComponent } from "components/Date";
-import { allPosts } from "contentlayer/generated";
+import { allPosts, Post } from "contentlayer/generated";
 import { compareDesc } from "date-fns";
 import Link from "next/link";
 import React from "react";
@@ -9,7 +9,7 @@ import { Layout } from "../components/Layout";
 import { siteDescription, siteTitle } from "../constants";
 import { socials } from "../data/socials";
 
-export default function Home({ posts }) {
+export default function Home({ posts }: { posts: Post[] }) {
   return (
     <Layout title={siteTitle} description={siteDescription}>
       <div className="flex flex-col flex-grow">

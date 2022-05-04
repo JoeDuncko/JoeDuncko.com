@@ -1,13 +1,13 @@
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { allPosts } from "contentlayer/generated";
+import { allPosts, Post } from "contentlayer/generated";
 import { compareDesc } from "date-fns";
 import Link from "next/link";
 import { Date as DateComponent } from "../../components/Date";
 import { Layout } from "../../components/Layout";
 import { siteDescription } from "../../constants";
 
-export default function Blog({ posts }) {
+export default function Blog({ posts }: { posts: Post[] }) {
   return (
     <Layout title="Joe Duncko's Blog" description={siteDescription}>
       <section className="max-w-3xl w-full mx-auto mb-8">

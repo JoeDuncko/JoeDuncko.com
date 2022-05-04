@@ -1,11 +1,10 @@
 import { Date } from "components/Date";
-import { allPosts } from "contentlayer/generated";
+import { allPosts, Post as PostType } from "contentlayer/generated";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import { Layout } from "../../components/Layout";
 import markdownStyles from "./markdown-styles.module.css";
 
-
-export default function Post({ post }) {
+export default function Post({ post }: { post: PostType }) {
   // IDK why this is here, it was in the example
   // if (!router.isFallback && !post?.slug) {
   //   return <ErrorPage statusCode={404} />;
@@ -23,7 +22,9 @@ export default function Post({ post }) {
           <h1 className="text-5xl">{post.title}</h1>
           <Date dateString={post.date} />
         </div>
-        <div className={markdownStyles["markdown"]}><MDXComponent />></div>
+        <div className={markdownStyles["markdown"]}>
+          <MDXComponent />
+        </div>
       </article>
     </Layout>
   );
