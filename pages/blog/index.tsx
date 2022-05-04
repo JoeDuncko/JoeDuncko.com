@@ -23,7 +23,7 @@ export default function Blog({ posts }) {
   );
 }
 
-function PostCard({ date, url, title, excerpt }) {
+const PostCard = ({ date, url, title, excerpt }) => {
   return (
     <div className="relative border-4 border-black rounded-lg p-4 hover:bg-slate-100">
       <h2 className="text-3xl">{title}</h2>
@@ -43,7 +43,7 @@ function PostCard({ date, url, title, excerpt }) {
       </div>
     </div>
   );
-}
+};
 
 export async function getStaticProps() {
   const posts = allPosts.sort((a, b) => {
