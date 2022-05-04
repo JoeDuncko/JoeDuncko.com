@@ -1,8 +1,7 @@
-import { Date } from "../../components/Date";
+import { Date } from "components/Date";
+import { allPosts, Post as PostType } from "contentlayer/generated";
+import { useMDXComponent } from "next-contentlayer/hooks";
 import { Layout } from "../../components/Layout";
-import { getAllPosts, getPostBySlug } from "../../lib/api";
-import markdownToHtml from "../../lib/markdownToHtml";
-import { Post as PostType } from "../../types/post";
 import markdownStyles from "./markdown-styles.module.css";
 
 export default function Post({ post }: { post: PostType }) {
@@ -10,6 +9,8 @@ export default function Post({ post }: { post: PostType }) {
   // if (!router.isFallback && !post?.slug) {
   //   return <ErrorPage statusCode={404} />;
   // }
+
+  const MDXComponent = useMDXComponent(post.body.code);
 
   return (
     <Layout
@@ -21,53 +22,27 @@ export default function Post({ post }: { post: PostType }) {
           <h1 className="text-5xl">{post.title}</h1>
           <Date dateString={post.date} />
         </div>
-        <div
-          className={markdownStyles["markdown"]}
-          dangerouslySetInnerHTML={{ __html: post.content }}
-        />
+        <div className={markdownStyles["markdown"]}>
+          <MDXComponent />
+        </div>
       </article>
     </Layout>
   );
 }
 
-type Params = {
-  params: {
-    slug: string;
-  };
-};
-
-export async function getStaticProps({ params }: Params) {
-  const post = getPostBySlug(params.slug, [
-    "title",
-    "excerpt",
-    "date",
-    "slug",
-    "content",
-  ]);
-
-  const content = await markdownToHtml(post.content || "");
-
+export async function getStaticPaths() {
+  const paths = allPosts.map((post) => post.url);
   return {
-    props: {
-      post: {
-        ...post,
-        content,
-      },
-    },
+    paths,
+    fallback: false,
   };
 }
 
-export async function getStaticPaths() {
-  const posts = getAllPosts(["slug"]);
-
+export async function getStaticProps({ params }) {
+  const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
   return {
-    paths: posts.map((post) => {
-      return {
-        params: {
-          slug: post.slug,
-        },
-      };
-    }),
-    fallback: false,
+    props: {
+      post,
+    },
   };
 }

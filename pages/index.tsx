@@ -1,19 +1,15 @@
 import { faArrowRight, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Date as DateComponent } from "components/Date";
+import { allPosts, Post } from "contentlayer/generated";
+import { compareDesc } from "date-fns";
 import Link from "next/link";
 import React from "react";
-import { Date } from "../components/Date";
 import { Layout } from "../components/Layout";
 import { siteDescription, siteTitle } from "../constants";
 import { socials } from "../data/socials";
-import { getAllPosts } from "../lib/api";
-import { Post } from "../types/post";
 
-type Props = {
-  allPosts: Post[];
-};
-
-export default function Home({ allPosts }: Props) {
+export default function Home({ posts }: { posts: Post[] }) {
   return (
     <Layout title={siteTitle} description={siteDescription}>
       <div className="flex flex-col flex-grow">
@@ -50,29 +46,8 @@ export default function Home({ allPosts }: Props) {
           <h2 className="mb-2 text-2xl">Blog</h2>
 
           <div className="flex flex-nowrap overflow-scroll gap-4">
-            {allPosts.map(({ slug, date, title, excerpt }) => (
-              <div
-                key={slug}
-                className="w-48 basis-48 flex-grow-0 flex-shrink-0 relative border-4 border-black rounded-lg p-4 hover:bg-slate-100"
-              >
-                <div>
-                  <h3 className="text-xl">{title}</h3>
-
-                  <small>
-                    <Date dateString={date} />
-                  </small>
-                </div>
-                <p>{excerpt}</p>
-                <div className="text-right">
-                  <small>
-                    <Link href={`/blog/${slug}`}>
-                      <a className="after:absolute after:inset-0 hover:underline">
-                        Read More <FontAwesomeIcon icon={faArrowRight} />
-                      </a>
-                    </Link>
-                  </small>
-                </div>
-              </div>
+            {posts.map((post, idx) => (
+              <PostCard key={idx} {...post} />
             ))}
           </div>
         </section>
@@ -81,10 +56,34 @@ export default function Home({ allPosts }: Props) {
   );
 }
 
-export const getStaticProps = async () => {
-  const allPosts = getAllPosts(["title", "excerpt", "date", "slug"]);
+const PostCard = ({ date, url, title, excerpt }) => {
+  return (
+    <div className="w-48 basis-48 flex-grow-0 flex-shrink-0 relative border-4 border-black rounded-lg p-4 hover:bg-slate-100">
+      <div>
+        <h3 className="text-xl">{title}</h3>
 
-  return {
-    props: { allPosts },
-  };
+        <small>
+          <DateComponent dateString={date} />
+        </small>
+      </div>
+      <p>{excerpt}</p>
+      <div className="text-right">
+        <small>
+          <Link href={url}>
+            <a className="after:absolute after:inset-0 hover:underline">
+              Read More <FontAwesomeIcon icon={faArrowRight} />
+            </a>
+          </Link>
+        </small>
+      </div>
+    </div>
+  );
 };
+
+export async function getStaticProps() {
+  const posts = allPosts.sort((a, b) => {
+    return compareDesc(new Date(a.date), new Date(b.date));
+  });
+
+  return { props: { posts } };
+}
