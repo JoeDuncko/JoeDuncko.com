@@ -1,4 +1,5 @@
 import { defineDocumentType, makeSource } from "contentlayer/source-files";
+import { h } from "hastscript";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeSlug from "rehype-slug";
 
@@ -40,7 +41,11 @@ export default makeSource({
       [
         rehypeAutolinkHeadings,
         {
-          behavior: "wrap",
+          behavior: "prepend",
+          content: (node) => h("span", "#"),
+          properties: {
+            className: "header-link",
+          },
         },
       ],
     ],
