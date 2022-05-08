@@ -5,11 +5,6 @@ import { Layout } from "../../components/Layout";
 import markdownStyles from "./markdown-styles.module.css";
 
 export default function Post({ post }: { post: PostType }) {
-  // IDK why this is here, it was in the example
-  // if (!router.isFallback && !post?.slug) {
-  //   return <ErrorPage statusCode={404} />;
-  // }
-
   const MDXComponent = useMDXComponent(post.body.code);
 
   return (
