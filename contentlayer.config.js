@@ -43,9 +43,6 @@ export default makeSource({
         {
           behavior: "prepend",
           content: (node) => h("span", "#"),
-          properties: {
-            className: "header-link",
-          },
         },
       ],
     ],
