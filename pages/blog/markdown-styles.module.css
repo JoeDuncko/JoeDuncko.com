@@ -20,6 +20,7 @@
 
 .markdown a {
   @apply text-[#00FF33];
+  @apply font-medium;
 }
 
 .markdown a:hover {
