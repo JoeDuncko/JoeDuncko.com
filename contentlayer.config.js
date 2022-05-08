@@ -1,4 +1,7 @@
 import { defineDocumentType, makeSource } from "contentlayer/source-files";
+import { h } from "hastscript";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import rehypeSlug from "rehype-slug";
 
 export const Post = defineDocumentType(() => ({
   name: "Post",
@@ -32,4 +35,16 @@ export const Post = defineDocumentType(() => ({
 export default makeSource({
   contentDirPath: "posts",
   documentTypes: [Post],
+  mdx: {
+    rehypePlugins: [
+      rehypeSlug,
+      [
+        rehypeAutolinkHeadings,
+        {
+          behavior: "prepend",
+          content: (node) => h("span", "#"),
+        },
+      ],
+    ],
+  },
 });
