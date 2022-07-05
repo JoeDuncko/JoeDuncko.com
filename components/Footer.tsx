@@ -24,16 +24,24 @@ export function Footer() {
           href="https://github.com/JoeDuncko/joeduncko.com"
           className="m-1 hover:text-[#00FF33]"
           target="_blank"
+          rel="noreferrer"
+          title={`GitHub Link`}
         >
           <FontAwesomeIcon icon={faCodeBranch} />
         </a>
-        <button onClick={print} className="m-1 hover:text-[#00FF33]">
+        <button
+          onClick={print}
+          title={`Print`}
+          className="m-1 hover:text-[#00FF33]"
+        >
           <FontAwesomeIcon icon={faPrint} />
         </button>
         <a
           href="https://simpleanalytics.com/joeduncko.com?utm_source=joeduncko.com"
           className="m-1 hover:text-[#00FF33]"
           target="_blank"
+          rel="noreferrer"
+          title={`Simple Analytics Link`}
         >
           <FontAwesomeIcon icon={faChartLine} />
         </a>
