@@ -25,7 +25,7 @@ export function Footer() {
           className="m-1 hover:text-[#00FF33]"
           target="_blank"
           rel="noreferrer"
-          title={`GitHub Link`}
+          title="Fork this site on GitHub"
         >
           <FontAwesomeIcon icon={faCodeBranch} />
         </a>
@@ -41,7 +41,7 @@ export function Footer() {
           className="m-1 hover:text-[#00FF33]"
           target="_blank"
           rel="noreferrer"
-          title="To Simple Analytics"
+          title="View analytics on Simple Analytics"
         >
           <FontAwesomeIcon icon={faChartLine} />
         </a>
