@@ -31,8 +31,8 @@ export function Footer() {
         </a>
         <button
           onClick={print}
-          title={`Print`}
           className="m-1 hover:text-[#00FF33]"
+          title="Print this page"
         >
           <FontAwesomeIcon icon={faPrint} />
         </button>
@@ -41,7 +41,7 @@ export function Footer() {
           className="m-1 hover:text-[#00FF33]"
           target="_blank"
           rel="noreferrer"
-          title={`Simple Analytics Link`}
+          title="To Simple Analytics"
         >
           <FontAwesomeIcon icon={faChartLine} />
         </a>
