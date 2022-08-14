@@ -26,6 +26,17 @@ export const experiences: Experience[] = [
       "Helping Blastpoint adopt the latest frontend technologies and best practices for its customer intelligence platform.",
   },
   {
+    title: "Adjunct Professor",
+    company: {
+      name: "Youngstown State University",
+      location: "Youngstown, OH",
+      link: "https://ysu.edu/",
+    },
+    startDate: parse("2022-08-29", "y-M-d", new Date()),
+    description:
+      "Bringing my industry experience to the classroom to teach web development related courses at YSU.",
+  },
+  {
     title: "Software Engineer",
     company: {
       name: "BrdgAI",
@@ -35,7 +46,7 @@ export const experiences: Experience[] = [
     startDate: parse("2020-01-02", "y-M-d", new Date()),
     endDate: parse("2021-10-06", "y-M-d", new Date()),
     description:
-      "Created UIs and designed developer-friendly APIs for machine learning pipeline. Projects included custom web-based image and video labeling software (react, canvas/konva), a cross-platform data collection mobile app (react native, Expo), and several dashboards. Helped manage a remote team of contractors located outside of the US. Heavily contributed to iterating devops workflow by spearheading implementing analytics, error reporting, and CI.",
+      "Created UIs and designed developer-friendly APIs for machine learning pipeline. Projects included custom web-based image and video labeling software (React, canvas/Konva), a cross-platform data collection mobile app (React Native, Expo), and several dashboards. Helped manage a remote team of contractors located outside of the US. Heavily contributed to iterating devops workflow by spearheading implementing analytics, error reporting, and CI.",
   },
   {
     title: "Co-Founder, CEO",
@@ -59,7 +70,7 @@ export const experiences: Experience[] = [
     startDate: parse("2017-08", "y-M", new Date()), // TODO: get real date
     endDate: parse("2018-09-14", "y-M-d", new Date()),
     description:
-      "Grew Drund's team and talent by coordinating internship programs, developer community outreach, and brand awareness.",
+      "Grew Drund's team and talent pool by coordinating internship programs and developer community outreach.",
   },
   {
     title: "Frontend Engineer",
@@ -71,7 +82,7 @@ export const experiences: Experience[] = [
     startDate: parse("2016-02-09", "y-M-d", new Date()),
     endDate: parse("2018-09-14", "y-M-d", new Date()),
     description:
-      "Maintained and added features to a white-label social-network-as-a-service. Helped modernize the project by leading the implementation of Javascript code standards via linting, integration testing, unit testing, and refactoring.",
+      "Maintained and added features to a white-label social-network-as-a-service. Helped modernize the project by leading the implementation of JavaScript code standards via linting, integration testing, unit testing, and refactoring.",
   },
   {
     title: "Software Development Intern",
@@ -83,7 +94,7 @@ export const experiences: Experience[] = [
     startDate: parse("2015-05-19", "y-M-d", new Date()),
     endDate: parse("2015-08-19", "y-M-d", new Date()),
     description:
-      "Spent three months helping ten-odd startups get their MVPs ready in time for Demo Day in Flashstarts' intensive program. Learned a ton about sales and entrepreneurship along the way. Worked simultaneously on multiple projects with multiple teams. Worked with the MEAN stack on one project, and Phaser.js using Typescript on another. Discovered the wonderful thing that is UX testing.",
+      "Spent three months helping ten-odd startups get their MVPs ready in time for Demo Day in Flashstarts' intensive program. Learned a ton about sales and entrepreneurship along the way. Worked simultaneously on multiple projects with multiple teams. Utilized the MEAN stack on one project, and Phaser.js using Typescript on another. Discovered the wonderful thing that is UX testing.",
   },
   {
     title: "Student Web Developer",
