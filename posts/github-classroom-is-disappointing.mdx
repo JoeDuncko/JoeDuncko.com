@@ -1,0 +1,87 @@
+---
+title: "GitHub Classroom is Disappointing"
+excerpt: "Why I'm not using GitHub Classroom for teaching my first class."
+date: 2022-09-05
+---
+
+I was super excited to use [GitHub Classroom](https://classroom.github.com/) with [GitHub CodeSpaces](https://github.com/features/codespaces) for teaching my very first class, CSIS 1570 Web Systems and Technologies, this semester at YSU.
+
+My hope was to teach students git/GitHub first thing, and was looking forward to having automated tests via [GitHub Actions](https://github.com/features/actions) to help students preemptively know how their work is going and help me grade.
+
+Ultimately, I decided against it. And I'm frustrated. So frustrated I wrote out a frustration-fueled rant about my experience.
+
+<details>
+    <summary>Click here to read my (unedited) rant, which I'm including for posterity. Feel free to skip this and just read my conclusions below.</summary>
+
+    Getting signed up for GitHub Classroom was easy.
+
+    Once in, I made a GitHub organization for my class and copied the initial assignment, which is a tutorial on Git/GitHub.
+
+    Looking through the assignment - which seemed like a pretty good summary of git and the GitHub platform - I noticed that there were only optional steps for the student to take at the end - nothing required to submit to the teacher.
+
+    I was a little disappointed at this. I was hoping it'd guide the student through their first pull request. That was okay, though, since I could make that change myself.
+
+    The next order of business was to figure out this Github CodeSpaces integration that was being so heavily promoted.
+
+    I looked in the settings for the assignment and found that there was a setting for online IDEs right there. One problem: it was missing CodeSpaces. Hm...
+
+    After some settings spelunking, it turned out you needed to enable CodeSpaces on the Organization itself, and in order to do that you needed to verify your teaching status.
+
+    Verification was easy - it happened instantly. Nice. Then a prompt appeared in the Classroom admin page to upgrade my GitHub org for free. Also nice. Not so nice: the CodeSpaces option on the Organization still was prompting me to verify my account.
+
+    At that point, I gave up for the night, frustrated.
+
+    ---
+
+    The next day I decided to give GitHub Classroom another shot.
+
+    Magically, CodeSpaces was now available on my organization! I quickly enabled it and went to set it up on my assignment. Turns out, you can't edit the IDE setting on assignments.
+
+    Fine. I then created a copy of that assignment and enabled it. I then decided to try using the assignment link myself and, awesomely, it let me. It landed me in a repository forked from the assignment, ready for me to go through a test run.
+
+    The first thing I did is see this button (ADD BUTTON) and click it. It just opened the image in a new tab. Oh, duh, I should have read. My bad.
+
+    I clicked the Code button. Huh, it still just had the usual options for getting the repository onto your local machine... Oh! There was another tab with the option to launch the repository in CodeSpaces (ADD SCREENSHOTS).
+
+    "Oh boy" I thought to myself "I'll have to field so many questions about how to get to this".
+
+    I opened the repository up in CodeSpaces and finally read through the github-starter-course assignment. I make a change, make a PR, then check the Classroom admin interface. Huh - it says there are no commits and the assignment hasn't been submitted yet. Weird.
+
+    I merge the PR. Now it says that there are commits, but the assignment still hasn't been "submitted". Very weird.
+
+    So I Google and find the following in the docs: "Submission is triggered at the assignment deadline." What does that mean though?
+
+    I set a due date in a couple minutes, wait it out and the assignment now shows as submitted! Great! Not exactly what I was hoping for though. I wanted to be able to see if students submitted work early. That then begged the question: what IS submitting?
+
+    I tried again with another test repo, this time only making a PR. The submission time came and went and the assignment was marked as not submitted. I was disappointed.
+
+    My original plan was to have students add me as a reviewer to their PRs, where then they could see if tests I added to help grade and guide pass, and I could approve when things are good to go. This model of "submitted" didn't work with that plan. But that was okay.
+
+    So I did one more test - I then merged the PR into the repo. I was disappointed to find that the assignment was still marked as not submitted. How was I supposed to know if a student submitted the assignment late? I guess by watching my inbox for being added as a reviewer?
+
+        <code>/rant</code>
+
+</details>
+
+The complexity of GitHub Classroom is what turned me away from it.
+
+My class is an introductory course, and having students learn git, GitHub, web dev, AND the quirks of Classroom just seemed like too much.
+
+The GitHub Classroom quirks are also visible from the instructor side. For example, currently the "Submitted" status on an assignment means that a commit was been pushed up and the due date for the assignment has passed.
+
+While that may seem fine on first read, it has implications for instructors wanting to allow and track early and late submissions and allow students to resubmit their work. I'm one of those instructors.
+
+This submission status is even less clear to students, who need to know for sure that their work has been successfully submitted.
+
+These are my suggestions to the GitHub Classroom team:
+
+- Allow instructors to select what the definition of "Submitted" is. The option I'd like is if a student has main a PR and selected a teacher to review it.
+- Allow instructors to not allow commits directly to `main` in assignments.
+- Allow instructors to optionally allow late and early submissions.
+- Allow instructors to optionally allow students to resubmit.
+- Show the date of submission in the Classroom admin.
+- Make it clearer to students when their work has been submitted to the teacher.
+- Give instructors a mechanism for marking assignments as reviewed.
+- Make CodeSpaces a first class citizen in repos where it's enabled. Consider showing it as a big button at the top of the page, maybe next to the Code button.
+
+In the end, I decided to use [Replit Teams for Education](https://replit.com/site/teams-for-education) for my class instead. It has all the above features, and most importantly it feels like Education is actually a first class citizen on their platform.

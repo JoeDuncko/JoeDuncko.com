@@ -6,8 +6,38 @@
 .markdown p,
 .markdown ul,
 .markdown ol,
-.markdown blockquote {
+.markdown blockquote,
+.markdown details {
   @apply mb-2;
+}
+
+.markdown summary:hover {
+  cursor: pointer;
+}
+
+.markdown details {
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 0.5em 0.5em 0;
+}
+
+.markdown summary {
+  border-radius: 4px;
+  padding: 0.5em 0.5em 0;
+}
+
+.markdown summary {
+  margin: -0.5em -0.5em 0;
+  padding: 0.5em;
+}
+
+.markdown details[open] {
+  padding: 0.5em;
+}
+
+.markdown details[open] summary {
+  border-bottom: 1px solid #aaa;
+  margin-bottom: 0.5em;
 }
 
 .markdown h2 {
