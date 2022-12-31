@@ -1,8 +1,8 @@
 export const myName = "Joe Duncko";
 
 export const siteDescription =
-  "Product-obsessed frontend engineer and community organizer based in Youngstown, Ohio";
+  "Frontend engineer and community organizer based in Youngstown, Ohio";
 
-export const catchPhrase = "let's create together";
+export const catchPhrase = "Content Catalyst";
 
 export const siteTitle = `${myName} | ${catchPhrase}`;
