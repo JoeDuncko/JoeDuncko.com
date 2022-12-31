@@ -1,11 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import { Communities } from "../components/Communities";
 import { Contact } from "../components/Contact";
 import { Education } from "../components/Education";
 import { Experiences } from "../components/Experiences";
 import { Interests } from "../components/Interests";
 import { Layout } from "../components/Layout";
-import { Memberships } from "../components/Memberships";
 import { OpenSourceContributions } from "../components/OpenSourceContributions";
 import { Projects } from "../components/Projects";
 import { Socials } from "../components/Socials";
@@ -46,7 +45,7 @@ export default function Resume() {
           </div>
           <div className="flex-1">
             <Education />
-            <Memberships />
+            <Communities />
             <OpenSourceContributions />
             <Projects />
             <Interests />

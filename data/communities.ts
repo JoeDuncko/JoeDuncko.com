@@ -1,11 +1,11 @@
-type Membership = {
+type Community = {
   name: string;
   position: string;
   description: string;
   link: string;
 };
 
-export const memberships: Membership[] = [
+export const communities: Community[] = [
   {
     name: "Code Youngstown",
     position: "Co-Organizer",
