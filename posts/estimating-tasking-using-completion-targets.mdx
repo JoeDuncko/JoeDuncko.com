@@ -1,0 +1,123 @@
+---
+title: "On estimating tasking using Completion Targets"
+excerpt: "I propose a slightly different approach to estimating tasking: Completion Targets."
+date: 2023-05-08
+---
+
+One thing that a lot of teams struggle with is estimating tasking.
+
+In my opinion, the most important part of estimating tasking is breaking down tasks into the smallest possible slices.
+
+These small Slices should have a handful of properties:
+
+1. They should be able to be completed by 1 person
+2. They should be able to be tested independently for completion
+3. They should be able to be merged into the codebase without breaking anything
+
+> Note that in order to achieve #3 in a code base with significant complexity feature toggling may be required.
+
+Once your tasking is broken down into individual Slices, it's time to estimate.
+
+There are numerous approaches to estimation. Some focus on accurately determining the number of hours a task will require, with results occasionally being slightly over or under the actual time. Agile methodology, on the other hand, utilizes "story points" as a substitute for hours, which serve as an effective representation of the effort involved.
+
+I propose a slightly different approach to estimating tasking: **Completion Targets**.
+
+## Completion Targets
+
+Completion targets are an informal promise from the individual developer taking on the tasks that if they are given a certain block of undisturbed time, a certain task can be "completed".
+
+A Completion Target should include all parts of the development process - doing any background work to fully understand the problem being addressed, all the way to and including writing up and submitting the PR. It should even include time for taking breaks during and between tasks.
+
+## Estimating Completion Targets
+
+When I estimate Completion Targets, I try to do so in powers of 2 because it helps me estimate high. For example, if I'm between estimating the Completion Target of a task between 4 and 8 hours I'll always call it 8 hours, never 6.
+
+This is important because one of the fundamental thoughts behind Completion Targets is that they are a budget, and that it is far preferred to take less time from that budget than to go over. It also gives me room to breath and be a good code citizen, leaving code better than how I found it.
+
+When I estimate many tasks at once, I think of my Completion Targets as the number of tasks I'm committing to complete in a given time frame.
+
+Here's how I think of my Completion Targets when I estimate tasks:
+
+- A Completion Target of 1: Given a fully undisturbed day, I can knock out 8 of these task
+- A Completion Target of 2:: Given a fully undisturbed day, I can knock out 4 of these tasks
+- A Completion Target of 4:: Given a fully undisturbed day, I can knock out 2 of these tasks
+- A Completion Target of 8: Given a fully undisturbed day, I can knock out 1 of these tasks
+
+The "undisturbed" bit is important because the average full-time developer has only ~20 hours of undisturbed, productive time a week. Be sure to take that into account.
+
+## On Low Estimations
+
+If you find yourself estimating task completion targets under 1 hour, you are probably not considering the time it takes to validate the issue, validate your fix, and write up a good PR that is easy for the reviewer to drop in and do the same.
+
+## On High Estimations
+
+If you find yourself rating any tasks above 8 hours, you should probably go back and split up your tasking to be smaller. There are a handful of common reasons that developers estimate tasks above 8 hours.
+
+### Task is "too big" to be broken up
+
+As software developers, one of our primary skills is breaking up complex projects into smaller, executable parts.
+
+For senior developers, this is often something that is done subconsciously while executing a task. It typically sounds something along the lines of "To accomplish Y, first I'll do A, then I'll do B, then I'll do C...".
+
+I propose that instead of estimating task Y, that you instead estimate (and make pull requests for) steps A, B, and C separately.
+
+Estimating in (and working in) smaller chunks has numerous benefits:
+
+- It's more accurate, to estimate an individual piece of work
+- It can surface unknowns and risks earlier, and better hints where unknowns/risks might lie
+- It forces developers to have conversations about execution earlier, prompting input from other developers
+- It helps the team better stay informed on what actual work is being done and what it entails
+- It makes it easier to move unfinished work to the next sprint
+- It promotes smaller, more easily reviewable PRs
+
+If you find that you want to create a relationship between several tasks, do so using whatever your planning software offers - epics, tags, etc. An Epic doesn't need to be huge, but it should be able to be completed - as such, because software is never complete, I suggest denoting a version when creating an Epic. For example, "X v1" or "Y MVP".
+
+Instead of using a group of tasks, it may be your initial inclination to reach towards your planning software's version of subtasks. In my opinion, if you find yourself using subtasks, it's a good rule of thumb that your top level task should probably be broken up into multiple tasks.
+
+My policy is that it's okay to split tasks into smaller chunks if it makes sense, even mid-sprint - I'd rather some work be accomplished and hopefully merged than none. When breaking up a larger task, the resulting smaller tasks will probably have higher but more accurate estimations, and that's a good thing.
+
+What's important is to split tasks early and often so that everyone has visibility into what is going on, what is done, and what isn't. This also reduces ambiguity of what's done and what isn't done between sprints, and what tasks are unfinished at the end of a sprint and need rolled over to the next sprint.
+
+### Too many unknowns
+
+If you are estimating a task high because it has unknowns, it's probably not a good task at all.
+
+Instead, consider creating a time-boxed "spike" research task instead. It may take more than one Spike, and it can be hard to tell if you have done enough research before executing a set of tasks.
+
+A rule of thumb is that you are probably ready to execute once you feel comfortable enough to break your project down into tasks that are smaller than 8 hours.
+
+### Technical debt
+
+If most tasks are consistently taking more than 8 hours to accomplish, and you are sure that your tasks are as small as possible and have very few unknowns, consider that you may be drowning in technical debt.
+
+## On Reviewing
+
+But Joe, you said that developers only have ~20 uninterrupted productive hours a week! Can't we get some of that back by creating larger PRs, which reduces context switching for both the developer creating the PR and their reviewers?
+
+No, I say! Time spent reviewing, despite the context switching it may bring, is not wasted.
+
+Having a second pair of eyes on every change increases quality by having a second chance to catch bugs, encouraging best practices, and keeping people honest.
+
+It also fosters cross pollination - all new code has at least two people who know about it, and thus presumably two people who can easily jump into it and work on it.
+
+If the team has enough velocity, it's not unexpected to spend up to an hour a day reviewing PRs - with an average review time of 10 minutes or less.
+
+### Reviews are too lengthy
+
+If the average review is taking longer than 10 minutes, and you are sure your tasks - and thus your diffs - are small enough, consider compensating with automation and tooling, not getting rid of the review process - things like preview servers, pre-configured REST testing tools, etc. can help speed up the process.
+
+### Too many reviews
+
+If the number of reviews per developer is becoming overwhelming, make sure everyone is participating in reviews, not just management or senior devs - spread responsibility and knowledge around.
+
+I personally check my review queue twice a day - when I set down for work and after lunch. That means that the maximum my team will wait for a review from me should be is ~4 hours.
+
+### Time waiting for reviews
+
+While you are waiting for your current PR to be reviewed, consider working on something completely different.
+
+If you prefer to work on the next dependent slice, consider starting work locally. Branching off branches can be painful when it comes to merging - especially if you are using squash merging (you are squash merging your PRs, right?) - so consider committing locally and cherry picking your changes to a new branch once your previous PR is merged.
+
+## Ending notes
+
+This commentary is most relevant in the confines of Web Development, or other types of software development where you are prioritizing velocity and reusing open source building blocks and mostly moving along trodden paths.
