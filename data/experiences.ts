@@ -44,6 +44,7 @@ export const experiences: Experience[] = [
       link: "https://ysu.edu/",
     },
     startDate: parse("2022-08-29", "y-M-d", new Date()),
+    endDate: parse("2023-05-8", "y-M-d", new Date()),
     description:
       "Bringing my industry experience to the classroom to teach web development related courses at YSU.",
   },
