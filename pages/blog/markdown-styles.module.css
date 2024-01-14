@@ -49,7 +49,7 @@
 }
 
 .markdown a {
-  @apply text-[#00FF33];
+  @apply text-[#ff9300];
   @apply font-medium;
 }
 
