@@ -1,10 +1,9 @@
 import { faArrowRight, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Date as DateComponent } from "components/Date";
-import { allPosts, Post } from "contentlayer/generated";
+import { Post, allPosts } from "contentlayer/generated";
 import { compareDesc } from "date-fns";
 import Link from "next/link";
-import React from "react";
 import { Layout } from "../components/Layout";
 import { siteDescription, siteTitle } from "../constants";
 import { socials } from "../data/socials";
@@ -21,7 +20,7 @@ export default function Home({ posts }: { posts: Post[] }) {
                   href={social.link}
                   target="_blank"
                   title={`To Joe Duncko's ${social.name}`}
-                  className="hover:text-[#00FF33]"
+                  className="hover:text-[#ff9300]"
                 >
                   <FontAwesomeIcon icon={social.icon} />
                 </a>
@@ -32,7 +31,7 @@ export default function Home({ posts }: { posts: Post[] }) {
                 href={"mailto:personal@JoeDuncko.com"}
                 target="_blank"
                 title={"Email Joe Duncko"}
-                className="hover:text-[#00FF33]"
+                className="hover:text-[#ff9300]"
               >
                 <FontAwesomeIcon icon={faEnvelope} />
               </a>
@@ -58,15 +57,17 @@ export default function Home({ posts }: { posts: Post[] }) {
 
 const PostCard = ({ date, url, title, excerpt }) => {
   return (
-    <div className="w-48 basis-48 flex-grow-0 flex-shrink-0 relative border-4 border-black rounded-lg p-4 hover:bg-slate-100">
+    <div className="w-48 basis-48 flex-grow-0 flex-shrink-0 relative content-between border-4 border-black rounded-lg p-4 hover:bg-slate-100 flex flex-col justify-between">
       <div>
         <h3 className="text-xl">{title}</h3>
 
         <small>
           <DateComponent dateString={date} />
         </small>
+
+        <p>{excerpt}</p>
       </div>
-      <p>{excerpt}</p>
+
       <div className="text-right">
         <small>
           <Link href={url}>

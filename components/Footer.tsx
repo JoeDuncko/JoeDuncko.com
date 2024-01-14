@@ -22,7 +22,7 @@ export function Footer() {
       <div className="text-center flex-1">
         <a
           href="https://github.com/JoeDuncko/joeduncko.com"
-          className="m-1 hover:text-[#00FF33]"
+          className="m-1 hover:text-[#ff9300]"
           target="_blank"
           rel="noreferrer"
           title="Fork this site on GitHub"
@@ -31,14 +31,14 @@ export function Footer() {
         </a>
         <button
           onClick={print}
-          className="m-1 hover:text-[#00FF33]"
+          className="m-1 hover:text-[#ff9300]"
           title="Print this page"
         >
           <FontAwesomeIcon icon={faPrint} />
         </button>
         <a
           href="https://simpleanalytics.com/joeduncko.com?utm_source=joeduncko.com"
-          className="m-1 hover:text-[#00FF33]"
+          className="m-1 hover:text-[#ff9300]"
           target="_blank"
           rel="noreferrer"
           title="View analytics on Simple Analytics"
