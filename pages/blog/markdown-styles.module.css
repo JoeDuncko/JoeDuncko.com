@@ -69,3 +69,21 @@
 .markdown hr {
   margin: 1em 0;
 }
+
+.markdown pre {
+  overflow: scroll;
+}
+
+.markdown img {
+  margin-bottom: 0.5rem;
+}
+
+.markdown code {
+  background-color: #f9f9f9;
+  border: 1px solid #e1e4e8;
+  font-family: "Courier New", Courier, monospace;
+  color: #333333;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
