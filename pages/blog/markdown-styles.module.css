@@ -72,6 +72,7 @@
 
 .markdown pre {
   overflow: scroll;
+  margin-bottom: 0.5rem;
 }
 
 .markdown img {
