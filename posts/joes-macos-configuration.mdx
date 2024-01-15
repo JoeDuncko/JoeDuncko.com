@@ -1,0 +1,167 @@
+---
+title: "Joe's macOS Configuration"
+excerpt: "All the settings Joe changes when he sets up a fresh macOS installation."
+date: 2024-01-15
+---
+
+This is an update to [a medium post I made in 2018](https://medium.com/@JoeDuncko/my-macos-set-up-8f2acbc2683f) documenting the settings I usually change when I set up a fresh macOS installation.
+
+This is mostly for myself, and to share with people who get their first Mac.
+
+This guide was most recently updated 2024-01-15 with macOS 14.2.1.
+
+## Desktop
+
+### Turn on Dark Mode
+
+<img
+  src="/images/joes-macos-configuration/appearance.png"
+  alt={"Joe's Appearance Settings"}
+/>
+
+In Settings, under Appearance, Select `Dark` mode.
+
+### Turn on Night Shift
+
+<img
+  src="/images/joes-macos-configuration/night-shift.png"
+  alt={"Joe's Night Shift settings"}
+/>
+
+In Settings, under Displays, choose `Night Shift`. Set `Schedule` to `Sunset to Sunrise` and turn `Color Temperature` up all the way.
+
+### Display Seconds in Menu Bar
+
+<img
+  src="/images/joes-macos-configuration/display-the-time-with-seconds.png"
+  alt={"Joe's Display Time with Seconds settings"}
+/>
+
+In Settings, search the word `seconds`. Select `Display the time with seconds in the menu bar`. Turn `Display the time with seconds` to `On`.
+
+## Set up Dock
+
+In Settings, under Desktop and Dock...
+
+### Under Dock
+
+<img
+  src="/images/joes-macos-configuration/settings-desktop-and-dock-dock.png"
+  alt={"Joe's Dock settings"}
+/>
+
+- Slide `Size` to ~20%
+- Slide `Magnification` to ~30%
+- Set `Position on Screen` to `Left`
+- Switch `Minimize windows into application icon` to `On`
+- Switch `Automatically hide and show the dock` to `Off`
+- Switch `Show indicators for open applications` to `On`
+- Switch `Show suggested and recent apps in Dock` to `Off`
+
+### Under Desktop and Stage Manager
+
+<img
+  src="/images/joes-macos-configuration/settings-desktop-and-dock-desktop-and-stage-manager.png"
+  alt={"Joe's Desktop and Stage Manager settings"}
+/>
+
+- Switch `Stage Manager` to `Off`
+
+### Under Mission control
+
+<img
+  src="/images/joes-macos-configuration/settings-desktop-and-dock-mission-control.png"
+  alt={"Joe's Mission Control settings"}
+/>
+
+This is the stuff that makes using the Mac's multiple desktop features feel really good.
+
+- Switch `Automatically rearrange Spaces based on most recent use` to `Off`
+- Switch `When switching to an application, switch to a space with open windows for the application` to `Off`
+- Switch `Group windows by application` to `Off`
+- Switch `Displays have separate spaces` to `On`
+
+## Finder
+
+<img
+  src="/images/joes-macos-configuration/finder-settings-general.png"
+  alt={"Joe's General Finder settings"}
+/>
+
+In File > Settings, under General, uncheck showing any items on desktop.
+
+<img
+  src="/images/joes-macos-configuration/finder-settings-sidebar.png"
+  alt={"Joe's Sidebar Finder settings"}
+/>
+
+In File > Settings, under Sidebar, check all items under `Favorites` and `Locations`. I personally also disable the `Recent tags` function, as I don't use them.
+
+<img
+  src="/images/joes-macos-configuration/finder-settings-advanced.png"
+  alt={"Joe's Advanced Finder settings"}
+/>
+
+In File > Settings, under Advanced, checkmark `Show all filename extensions` and both options for `Keep folders on top`.
+
+<img
+  src="/images/joes-macos-configuration/finder-view-settings.png"
+  alt={"Joe's Finder View settings"}
+/>
+
+In View, select to Show Toolbar, Show Path Bar, and Show Status Bar.
+
+<img
+  src="/images/joes-macos-configuration/finder-view-options.png"
+  alt={"Joe's Finder View Options settings"}
+/>
+
+While in any folder besides Recents, in View > Show View Options, set `Sort By` to `name`, then at the bottom click `Use as Defaults`.
+
+## Keyboard
+
+### Keyboard Layout - Colemak
+
+In Settings, under Keyboard, under Text Input, click `Edit...`.
+
+Then click the `+` button at the bottom left.
+
+Under `English`, select `Colemak`. Click `Save`.
+
+### Touch bar
+
+In Settings, under Keyboard, click `Touch Bar Settings...`.
+
+Set `Touch Bar shows` to `Expanded Control Strip`.
+
+Then, click `Customize Control Strip`. See my configuration below. Note the leftmost button is the `Input Sources` touch key.
+
+<img
+  src="/images/joes-macos-configuration/touch-bar.png"
+  alt={"Joe's Touch Bar layout"}
+/>
+
+## Screenshots
+
+Change the default folder screenshots are saved to by running the following in your terminal:
+
+```
+defaults write com.apple.screencapture location [folder location here]
+```
+
+[Fuller instructions available here](https://www.macrumors.com/how-to/change-screenshots-folder/)
+
+## Shortcuts
+
+### shift-cmd-v to paste without formatting
+
+- Open System Settings > Keyboard > Keyboard Shortcuts
+- Then click on the Keyboard Shortcuts button.
+- From the next screen, choose App Shortcuts from the list at left.
+- From the Application drop-down menu, choose All Applications.
+- Click on the + symbol to assign a new shortcut.
+- In the Menu Title field, enter Paste and Match Style. Enter it exactly as is.
+- In the Keyboard Shortcut field, press shift-cmd-v
+- Click the Done button.
+
+[Fuller instructions with screenshots available here](https://havecamerawilltravel.com/set-paste-match-style-default-mac-osx/)
