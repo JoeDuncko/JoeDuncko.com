@@ -62,6 +62,11 @@
   @apply pl-8;
 }
 
+.markdown ol {
+  @apply list-decimal;
+  @apply pl-8;
+}
+
 .markdown :is(h2, h3, h4, h5, h6) a {
   @apply mr-2;
 }

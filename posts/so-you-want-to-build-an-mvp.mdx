@@ -1,0 +1,335 @@
+---
+title: "So You Want to Build an MVP"
+excerpt: "A non-technical guide to launching your first software product."
+date: 2024-01-16
+---
+
+## Preface
+
+I get a lot of questions about building MVPs. This blog post is my attempt to capture as much as the advice I typically give in one place.
+
+### Some caveats
+
+First, I believe that it's super important to understand the backgrounds of the people you take advice from, so you can understand the context of the advice. I myself have taken advice from people whose backgrounds I didn't fully understand, and it led to poor execution. As such, I encourage you to take a look at my [resume](/resume) before continuing.
+
+Second, most of this advice is based on failures. My own startup failed, only making $600 but burning $40,000 of my own money and investment. Very little of this advice is based on successes, even though [BlastPoint has seen some awesome success lately](https://technical.ly/startups/money-moves-blastpoint-diamond-kinetics-westinghouse-astrobotic-castle-biosciences/).
+
+Third, I want to empathize that the advice below is entirely based on opinion. The path to startup success can be [counterintuitive](https://www.paulgraham.com/before.html), and as such it can be difficult to differentiate between good and bad advice, and very tempting to take advice that sounds good but is probably bad.
+
+Fourth, given the above, I urge you to instead read something from someone who has been there, done that, and successfully exited. Maybe something from the [YC Startup Library](https://www.ycombinator.com/library)?
+
+## What is an MVP?
+
+### Minimum Viable Product
+
+"A version of a product with just enough features to be usable by early customers who can then provide feedback for future product development." ~ The Internet
+
+### Goals of an MVP
+
+- Prove the riskiest part(s) of your startup
+- Starting point of your "iteration engine"
+- Built
+  - Quickly
+  - Cheaply
+  - Maintainably
+  - Intentionally
+
+### Common Startup Risks
+
+- Are people interested in this?
+- Are people willing to pay for this?
+- Are people willing to pay enough for this?
+- Do I have a viable way to market?
+- Is this technically feasible?
+
+Fun activity: Write down these risks and rank them.
+
+### Start with your biggest risk
+
+Your goal as an entrepreneur is to strategically de-risk your startup, starting with the most risky parts.
+
+You may not need an MVP to prove the next most risky thing.
+
+### MVPs are expensive and inherently risky
+
+Don't want to waste resources building the wrong thing, if you can help it
+
+Goal: Learn as much as you can BEFORE you start building an MVP
+
+### Alternatives to building an MVP
+
+- "Wizard of Oz"ing an MVP
+  - Do things manually for your first customers
+  - Automating manual processes with spreadsheets / Airtable / low-code as you go
+- Using something off the shelf / white label
+- Create a clickable prototype design (Figma) and show your customers
+- Pre-sell the product (letters of intent, pre-sign ups, etc - preferably for money)
+- Lots more, get creative
+
+### Some Exceptions
+
+- You can build your own MVP - it's cheaper and less risky to build yourself
+- You are in a deep tech space (where your value comes from breaking a technical barrier) - difficult to Wizard of Oz, typically requires a specialized, technical founder
+
+### Whatever you do, optimize for learning
+
+If you don't feel like you are learning, you should probably try something different
+
+## My MVP Process
+
+1. Scope
+2. Visual Design
+3. Technical Design
+4. Estimation
+5. Implementation
+
+### Scope
+
+"The objectives and requirements needed to complete a project" ~ The Internet
+
+Thinking of MVPs as a de-risking tool is a strategy to help determine the "scope" of your MVP.
+
+What is the _minimum_ you need to build to de-risk your next riskiest thing?
+
+#### Why keep scope small?
+
+- Shorten time to de-risk
+- Lower cost
+- Less risk of project going over budget
+- Less risk of potential customers losing interest
+- Less to throw away if your MVP doesn't fit client requirements
+
+Once you decide on scope, you should do your absolute best to not change it until after getting customer feedback.
+
+Once the MVP is built, you can iterate.
+
+#### Examples of scope:
+
+- List of features (ex: Authentication, Posting to Feed, Groups)
+- List of user stories (ex: "As a user, I need to be able to share my contact details with other users")
+
+Either approach is good, it depends on how much creative control you want to give to the designer in the next step (which may be yourself!)
+
+### Design
+
+Two kinds of design: Visual and Technical
+
+#### Visual Design
+
+Goal: Have a visual reference that allows everyone involved to make sure they are on the same page (agree on scope)
+
+Levels of fidelities of visual designs:
+
+- Fat-marker sketch
+- Wireframe
+- High-fidelity wireframe
+- Clickable high-fidelity wireframe
+
+You may find that you work your way up the levels of fidelity of designs as the vision for the MVP comes together - that's okay!
+
+I generally prefer Clickable high-fidelity wireframes, as I find it helps identify gaps
+
+![[Pasted image 20230720171001.png]]
+
+Once you get to this point, you may want to take your design to your customers and ask them for feedback.
+
+It's cheaper/quicker to make changes at the design step than the implementation step.
+
+#### Technical Design
+
+- Tech stack
+- API/Resources
+- Architecture
+
+The Visual Design directly influences the Technical Design, so your developers can use the best tools for the job.
+
+##### Tech stack
+
+"The collection of technologies used to build a digital product" ~The Internet
+
+- Programming language (ie, JavaScript, Python, Ruby)
+- Framework(s) (ie, Flask, Django, Ruby on Rails, Express)
+- Libraries (ie, visualizations, widgets, etc)
+- External APIs (ie, Google Maps, ChatGPT)
+- Tools (version control, text editors, etc)
+
+Questions:
+
+- What libraries exist that we can take advantage of and save time?
+- Do we have a "special sauce" that we should develop in house? (Most tech startups don't!)
+
+Use what your devs know / Innovation tokens / Take technical risk purposefully
+
+A note on licensing:
+
+- Typically startups build their products out of "open source and free" tools. These tools are available to use by their authors because they are licensed as such. However, not all code on the internet is permissively licensed. Be careful!
+
+##### Resources/APIs
+
+"Resources" represent "what" is stored by the application. (users, posts, etc)
+
+"APIs" define "how" the resources can be interacted with and by whom. (creating posts, deleting posts, etc)
+
+Questions:
+
+- What are the "resources" required by the design?
+- What are the relationships between each resource?
+- What actions should be able to be done on each resource, and by whom?
+
+##### Architecture
+
+How your tech stack is put together, and how/where it's hosted (server)
+
+Options:
+
+- Cloud provider VS PaaS (platform as a service)
+- Containerization (Docker)
+
+Questions:
+
+- Does the architecture satisfy your expected initial customer load?
+- Do you have a path to scaling?
+- How much does this cost now? At what point will it be more cost effective for me to move to something else?
+
+Sometimes your architecture can influence your tech stack (ie, serverless)
+
+I personally like the PaaS route to start.
+
+##### Dev Youngstown's Go-To Technical Design
+
+- Domains: NameCheap
+- Version Control/CI/project management: GitHub
+- Web: React via Next.js, MUI components
+- Mobile Apps: React Native via Expo, NativeBase components
+- Backend: Python via FastAPI
+- Database: Postgres
+- Hosting: NorthFlank
+- Error reporting: Sentry
+
+### Estimation
+
+Unless your developer has built your exact product before with the exact same technologies, there will be "unknowns", aka "risks" in the project.
+
+These risks each have the opportunity to cost a LOT more than estimated, and take a LOT more time. Make sure you choose these risks very carefully.
+
+Typically developers break up their projected work into "Tasks"/"issues"/"tickets" - the smallest chunk of work.
+
+It's not uncommon to start a task and discover that it's actually bigger than you expected, and need to break it down further. Often, the estimate of these smaller tasks adds up to more than the original task.
+
+Once you have an estimate is your last opportunity to make sure your scope fulfills our MVP goals:
+
+- Prove the riskiest part of your startup
+- Starting point of your "iteration engine"
+- Built
+  - Quickly
+  - Cheaply
+  - Maintainably
+  - Intentionally
+
+It's not too late to look at the estimate and cut parts you thought would be easy and cheap, but not necessary to achieve the goals of the startup.
+
+#### Example ongoing cost breakdown
+
+- Domains: NameCheap ($15/yr)
+- Version Control/CI/project management: GitHub (4$/dev/mo)
+- Mobile Apps: Expo ($30/mo)
+- Hosting: NorthFlank (~$20/mo for DB and two worker servers)
+- Error reporting: Sentry (~$20)
+
+TOTAL: ~$100/mo
+
+However, this cost can quickly inflate to thousands a month given the nature of a project (data/bandwidth/compute intensive, or security intensive (HIPPA))
+
+#### Code must be maintained
+
+To support the latest devices and to protect against security vulnerabilities, all code that touches the internet needs security updates on at least a quarterly basis.
+
+This cost depends directly on the cost of your developers, but personally I dedicate roughly a day a month to upkeeping our dependencies at BlastPiont.
+
+### Implementation
+
+##### Tasks
+
+Tasks should be loaded into some sort of project management system (GitHub / Asana / etc).
+
+Tasks should be roughly ordered by how soon they can/should be done. Tasks that block other tasks can be optionally marked.
+
+##### Assignments
+
+Developers can either grab a new task when they finish their previous one (Kanban), or developers can be assigned tasks on a weekly or bi-weekly basis (Agile).
+
+##### CI/CD
+
+Tasks to set up a system to "automatically test and internally publish the latest changes" (aka CI/CD, Continuous Integration / Continuous Deployment) should be done as soon as there is something to test or internally publish (even if it's a blank page). This will start you on the right track.
+
+##### Workflow
+
+Each task should be done in its own "working branch". When complete, the developer should make a "pull request" of their proposed changes. At least one other developer should test and approve the PR before it is "merged" into "main", which should preferably always be kept in a working condition. (This process is called "GitHub Flow").
+
+Having at least two developers allows this process to work effectively.
+
+![[Pasted image 20230720201013.png]]
+
+##### Exceptions
+
+Everyone has their own way of working. I have found that GitHub Flow works really well. If you deviate from it, make sure there is a good reason.
+
+##### Last minute scope compromises
+
+The last handful of tasks in an MVP can be painful.
+
+Remember to focus on getting your MVP into your customers' hands as soon as possible so that you can get feedback.
+
+Last minute scope compromises are the least risky way to make sure your MVP is delivered on time and on budget.
+
+It's up to you to gauge your customers' tolerance to bugs and incomplete features - it may be higher than you think.
+
+## After your MVP is done
+
+MVP are by nature "waterfall" - they need to be comprehensively designed from the ground up, then executed with as few changes to the plan as possible.
+
+However, once your MVP is complete you can switch to "Agile" development.
+
+This is why we want to build the smallest possible MVP - so we can "kickstart" the agile innovation engine as soon as possible.
+
+### What is Agile Development?
+
+Agile development is the process of iter
+
+The goal is to set a "sprint" pacing - typically two weeks - which acts as a time to re-evaluate what has been built and what is currently being built to make sure you are still working towards your organization's
+
+![[Pasted image 20230720203936.png]]
+
+### How fast can my Innovation Engine run?
+
+As fast as you can get customer feedback, and your devs can build on it.
+
+Some of the largest organizations collect user data automatically and publish changes hundreds of times a day.
+
+You'll most likely be collecting user data manually - hopefully at least every two weeks. Publishing changes can happen at the same pace, or faster.
+
+## In house or contractors?
+
+- If software is not your competitive advantage, you may be able to get away with using contractors
+  - If you are a non-technical founder, your software is probably not your competitive advantage. (It's probably your way to market or your industry experience!)
+  - You will probably still want a senior technical person reviewing contractor work for quality
+- If software is your competitive advantage, you probably need to bring in a CTO and give them significant equity
+
+## Tips for hiring software engineers
+
+- Stock is no longer a proxy for pay
+- More senior person architecting and splitting up tasking
+- Less senior people can do the actual work
+
+## Resources
+
+- Code Youngstown
+- Y Combinator Startup School and Startup Library
+- Paul Graham essays
+- YBI
+
+# Questions?
+
+jduncko@ybi.org
+
+Joe Duncko for the YBI - 2023
