@@ -32,6 +32,12 @@ export const Post = defineDocumentType(() => ({
   },
 }));
 
+function customHeadingContent(node) {
+  const level = node.tagName.charAt(1);
+  const hashes = "#".repeat(parseInt(level, 10));
+  return h("span", hashes + " ");
+}
+
 export default makeSource({
   contentDirPath: "posts",
   documentTypes: [Post],
@@ -42,7 +48,7 @@ export default makeSource({
         rehypeAutolinkHeadings,
         {
           behavior: "prepend",
-          content: (node) => h("span", "#"),
+          content: customHeadingContent,
         },
       ],
     ],
