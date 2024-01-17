@@ -14,7 +14,16 @@ export default function Post({ post }: { post: PostType }) {
     >
       <article className="max-w-3xl w-full mx-auto">
         <div className="mb-2">
-          <h1 className="text-5xl">{post.title}</h1>
+          <h1 className="text-5xl">
+            <a
+              href={post.url}
+              className="hover:underline"
+              style={{ color: "#ff9300" }}
+            >
+              #
+            </a>{" "}
+            {post.title}
+          </h1>
           <Date dateString={post.date} />
         </div>
         <div className={markdownStyles["markdown"]}>
