@@ -105,3 +105,11 @@
   border-radius: 3px;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
+
+/* For nested lists */
+.markdown ul ul,
+.markdown ul ol,
+.markdown ol ul,
+.markdown ol ol {
+  margin-bottom: 0;
+}
