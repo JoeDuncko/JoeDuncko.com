@@ -26,8 +26,8 @@ Fourth, given the above, I urge you to instead read something from someone who h
 
 ### Goals of an MVP
 
-- Prove the riskiest part(s) of your startup
-- Starting point of your "iteration engine"
+- Proves the riskiest part(s) of your startup
+- Starts your "iteration engine"
 - Built
   - Quickly
   - Cheaply
@@ -48,20 +48,20 @@ Fun activity: Write down these risks and rank them.
 
 Your goal as an entrepreneur is to strategically de-risk your startup, starting with the most risky parts.
 
-You may not need an MVP to prove the next most risky thing.
+You may not need an MVP to prove your startups next largest risk.
 
 ### MVPs are expensive and inherently risky
 
-Don't want to waste resources building the wrong thing, if you can help it
+Because you don't want to waste resources building the wrong thing, if you can help it
 
-Goal: Learn as much as you can BEFORE you start building an MVP
+As such, make it your goal to learn as much as you can BEFORE you start building an MVP.
 
 ### Alternatives to building an MVP
 
 - "Wizard of Oz"ing an MVP
   - Do things manually for your first customers
-  - Automating manual processes with spreadsheets / Airtable / low-code as you go
-- Using something off the shelf / white label
+  - Automate manual processes with spreadsheets / Airtable / low-code as you go
+- Use something off the shelf / white label
 - Create a clickable prototype design (Figma) and show your customers
 - Pre-sell the product (letters of intent, pre-sign ups, etc - preferably for money)
 - Lots more, get creative
@@ -73,7 +73,7 @@ Goal: Learn as much as you can BEFORE you start building an MVP
 
 ### Whatever you do, optimize for learning
 
-If you don't feel like you are learning, you should probably try something different
+At any point, if you don't feel like you are learning, you should probably try something different
 
 ## My MVP Process
 
@@ -112,7 +112,7 @@ Either approach is good, it depends on how much creative control you want to giv
 
 ### Visual Design
 
-Goal: Have a visual reference that allows everyone involved to make sure they are on the same page (agree on scope)
+Goal: Have a visual reference that allows everyone involved to make sure they are on the same page (ie, agree on scope)
 
 Levels of fidelities of visual designs:
 
@@ -123,9 +123,19 @@ Levels of fidelities of visual designs:
 
 You may find that you work your way up the levels of fidelity of designs as the vision for the MVP comes together - that's okay!
 
-I generally prefer Clickable high-fidelity wireframes, as I find it helps identify gaps
+I generally prefer clickable high-fidelity wireframes, as I find it helps identify gaps.
 
-![[Pasted image 20230720171001.png]]
+<figure>
+  <img
+    src="/images/so-you-want-to-build-an-mvp/wireframes-fidelity-comparison.png"
+    alt="The different fidelities of wireframes"
+  />
+  <figcaption>
+    Image from
+    [this](https://mentormate.medium.com/exploring-wireframes-is-simple-better-6c6cb7c8d483)
+    excellent article that illustrates the different fidelities of wireframes.
+  </figcaption>
+</figure>
 
 Once you get to this point, you may want to take your design to your customers and ask them for feedback.
 
@@ -137,7 +147,7 @@ It's cheaper/quicker to make changes at the design step than the implementation 
 - API/Resources
 - Architecture
 
-The Visual Design directly influences the Technical Design, so your developers can use the best tools for the job.
+The Visual Design directly influences the Technical Design, so your developers can choose the best tools for the job.
 
 #### Tech stack
 
@@ -149,24 +159,26 @@ The Visual Design directly influences the Technical Design, so your developers c
 - External APIs (ie, Google Maps, ChatGPT)
 - Tools (version control, text editors, etc)
 
-Questions:
+##### Questions
 
 - What libraries exist that we can take advantage of and save time?
-- Do we have a "special sauce" that we should develop in house? (Most tech startups don't!)
+- Do we have a "special sauce" that we should develop in house? (Most tech startups don't, especially at first!)
 
-Use what your devs know / Innovation tokens / Take technical risk purposefully
+Use what your devs know. Take on technical risk purposefully. Consider thinking about choosing technologies in terms of spending [Innovation tokens](https://mcfunley.com/choose-boring-technology).
 
-A note on licensing:
+##### A Note on Licensing
 
-- Typically startups build their products out of "open source and free" tools. These tools are available to use by their authors because they are licensed as such. However, not all code on the internet is permissively licensed. Be careful!
+Typically startups build their products out of "open source and free" tools. These tools are available to use by their authors because they are licensed as such. However, not all code on the internet is permissively licensed. Be careful!
+
+[Here](https://choosealicense.com/licenses/) is a link to a list of common licenses and their implications.
 
 #### Resources/APIs
 
-"Resources" represent "what" is stored by the application. (users, posts, etc)
+"Resources" represent "what" is stored by the application (users, posts, etc).
 
-"APIs" define "how" the resources can be interacted with and by whom. (creating posts, deleting posts, etc)
+"APIs" define "how" the resources can be interacted with and by whom (creating posts, deleting posts, etc).
 
-Questions:
+##### Questions:
 
 - What are the "resources" required by the design?
 - What are the relationships between each resource?
@@ -174,7 +186,7 @@ Questions:
 
 #### Architecture
 
-How your tech stack is put together, and how/where it's hosted (server)
+How your tech stack is put together, and how/where it's hosted (ie, the server).
 
 Options:
 
@@ -187,7 +199,7 @@ Questions:
 - Do you have a path to scaling?
 - How much does this cost now? At what point will it be more cost effective for me to move to something else?
 
-Sometimes your architecture can influence your tech stack (ie, serverless)
+Sometimes your architecture can influence your tech stack (ie, serverless).
 
 I personally like the PaaS route to start.
 
@@ -204,25 +216,25 @@ I personally like the PaaS route to start.
 
 ### Estimation
 
-Unless your developer has built your exact product before with the exact same technologies, there will be "unknowns", aka "risks" in the project.
+Unless your developer has built your exact product before with the exact same technologies, there will be "unknowns", aka "risks", in the project.
 
 These risks each have the opportunity to cost a LOT more than estimated, and take a LOT more time. Make sure you choose these risks very carefully.
 
 Typically developers break up their projected work into "Tasks"/"issues"/"tickets" - the smallest chunk of work.
 
-It's not uncommon to start a task and discover that it's actually bigger than you expected, and need to break it down further. Often, the estimate of these smaller tasks adds up to more than the original task.
+It's not uncommon to start a task and discover that it's actually bigger than expected, and needs to be broken down further. Often, the estimate of these smaller tasks adds up to more than the original task.
 
-Once you have an estimate is your last opportunity to make sure your scope fulfills our MVP goals:
+Your estimate is your last opportunity to make sure your scope fulfills your MVP goals:
 
-- Prove the riskiest part of your startup
-- Starting point of your "iteration engine"
+- Proves the riskiest part of your startup
+- Starts your "iteration engine"
 - Built
   - Quickly
   - Cheaply
   - Maintainably
   - Intentionally
 
-It's not too late to look at the estimate and cut parts you thought would be easy and cheap, but not necessary to achieve the goals of the startup.
+It's not too late to look at the estimate and cut parts that are not necessary to achieve the goals your MVP goals.
 
 #### Example ongoing cost breakdown
 
@@ -230,17 +242,17 @@ It's not too late to look at the estimate and cut parts you thought would be eas
 - Version Control/CI/project management: GitHub (4$/dev/mo)
 - Mobile Apps: Expo ($30/mo)
 - Hosting: NorthFlank (~$20/mo for DB and two worker servers)
-- Error reporting: Sentry (~$20)
+- Error reporting: Sentry (~$20/mo)
 
 TOTAL: ~$100/mo
 
-However, this cost can quickly inflate to thousands a month given the nature of a project (data/bandwidth/compute intensive, or security intensive (HIPPA))
+However, this cost can quickly inflate to thousands a month given the nature of a project (data/bandwidth/compute intensive, or security intensive (HIPPA, SOC2, etc)).
 
 #### Code must be maintained
 
 To support the latest devices and to protect against security vulnerabilities, all code that touches the internet needs security updates on at least a quarterly basis.
 
-This cost depends directly on the cost of your developers, but personally I dedicate roughly a day a month to upkeeping our dependencies at BlastPiont.
+This cost depends directly on the cost of your developers, but personally I dedicate roughly a day a month to upkeeping our dependencies at BlastPoint.
 
 ### Implementation
 
@@ -248,7 +260,7 @@ This cost depends directly on the cost of your developers, but personally I dedi
 
 Tasks should be loaded into some sort of project management system (GitHub / Asana / etc).
 
-Tasks should be roughly ordered by how soon they can/should be done. Tasks that block other tasks can be optionally marked.
+Tasks should be roughly ordered by how soon they can/should be done. Tasks that block other tasks can be optionally marked as such.
 
 #### Assignments
 
@@ -256,19 +268,29 @@ Developers can either grab a new task when they finish their previous one (Kanba
 
 #### CI/CD
 
-Tasks to set up a system to "automatically test and internally publish the latest changes" (aka CI/CD, Continuous Integration / Continuous Deployment) should be done as soon as there is something to test or internally publish (even if it's a blank page). This will start you on the right track.
+Tasks to set up a system to "automatically test and internally publish the latest changes" (aka CI/CD, Continuous Integration / Continuous Deployment) should be done as soon as there is something to test or internally publish (even if it's a blank page). This will start you on the right track, as CI/CD are painful to add later in a project's life.
 
 #### Workflow
 
-Each task should be done in its own "working branch". When complete, the developer should make a "pull request" of their proposed changes. At least one other developer should test and approve the PR before it is "merged" into "main", which should preferably always be kept in a working condition. (This process is called "GitHub Flow").
+Each task should be done in its own "working branch". When complete, the developer should make a "pull request" (PR) of their proposed changes. At least one other developer should test and approve the PR before it is "merged" into "main", which should preferably always be kept in a working condition. (This process is called "GitHub Flow").
 
 Having at least two developers allows this process to work effectively.
 
-![[Pasted image 20230720201013.png]]
+<figure>
+  <img
+    src="/images/so-you-want-to-build-an-mvp/github-flow.png"
+    alt="The GitHub Flow"
+  />
+  <figcaption>
+    Image from
+    [this](https://github.com/SvanBoxel/release-based-workflow/issues/1) GitHub
+    reportError.
+  </figcaption>
+</figure>
 
 #### Exceptions
 
-Everyone has their own way of working. I have found that GitHub Flow works really well. If you deviate from it, make sure there is a good reason.
+Everyone has their own way of working, but I have found that the above works really well. Feel free to deviate from it to better fit your organization, but make sure there is a good reason for doing so.
 
 #### Last minute scope compromises
 
@@ -282,23 +304,32 @@ It's up to you to gauge your customers' tolerance to bugs and incomplete feature
 
 ## After your MVP is done
 
-MVP are by nature "waterfall" - they need to be comprehensively designed from the ground up, then executed with as few changes to the plan as possible.
+I believe that MVPs are by nature "waterfall" - they need to be comprehensively designed from the ground up, then executed with as few changes to the plan as possible.
 
 However, once your MVP is complete you can switch to "Agile" development.
 
-This is why we want to build the smallest possible MVP - so we can "kickstart" the agile innovation engine as soon as possible.
+This is one of the reasons we want to build the smallest possible MVP - so we can "kickstart" the agile innovation engine as soon as possible.
 
 ### What is Agile Development?
 
-Agile development is the process of iter
+Agile development is the process of measured iteration.
 
-The goal is to set a "sprint" pacing - typically two weeks - which acts as a time to re-evaluate what has been built and what is currently being built to make sure you are still working towards your organization's
+The goal is to set a "sprint" pacing - typically two weeks - which acts as a time to re-evaluate what has been built and what is currently being built to make sure you are still working towards your organization's goals.
 
-![[Pasted image 20230720203936.png]]
+<figure>
+  <img
+    src="/images/so-you-want-to-build-an-mvp/agile-methodology.png"
+    alt="The Agile methodology"
+  />
+  <figcaption>
+    Image from [this](https://www.nvisia.com/insights/agile-methodology) article
+    that illustrates the Agile Methodology.
+  </figcaption>
+</figure>
 
 ### How fast can my Innovation Engine run?
 
-As fast as you can get customer feedback, and your devs can build on it.
+As fast as you can get customer feedback, and your developers can build on it.
 
 Some of the largest organizations collect user data automatically and publish changes hundreds of times a day.
 
@@ -316,16 +347,3 @@ You'll most likely be collecting user data manually - hopefully at least every t
 - Stock is no longer a proxy for pay
 - More senior person architecting and splitting up tasking
 - Less senior people can do the actual work
-
-## Resources
-
-- Code Youngstown
-- Y Combinator Startup School and Startup Library
-- Paul Graham essays
-- YBI
-
-# Questions?
-
-jduncko@ybi.org
-
-Joe Duncko for the YBI - 2023
