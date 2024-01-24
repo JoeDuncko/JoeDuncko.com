@@ -113,3 +113,12 @@
 .markdown ol ol {
   margin-bottom: 0;
 }
+
+.markdown figure img {
+  margin: 0;
+}
+
+.markdown figure figcaption {
+  font-size: small;
+  font-style: italic;
+}
