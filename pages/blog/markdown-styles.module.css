@@ -41,11 +41,23 @@
 }
 
 .markdown h2 {
+  @apply text-4xl mt-4 mb-2 leading-snug;
+}
+
+.markdown h3 {
   @apply text-3xl mt-4 mb-2 leading-snug;
 }
 
 .markdown h3 {
   @apply text-2xl mt-4 mb-2 leading-snug;
+}
+
+.markdown h4 {
+  @apply text-xl mt-4 mb-2 leading-snug;
+}
+
+.markdown h5 {
+  @apply text-lg mt-4 mb-2 leading-snug;
 }
 
 .markdown a {
@@ -59,6 +71,11 @@
 
 .markdown ul {
   @apply list-disc;
+  @apply pl-8;
+}
+
+.markdown ol {
+  @apply list-decimal;
   @apply pl-8;
 }
 
@@ -87,4 +104,21 @@
   padding: 0.2em 0.4em;
   border-radius: 3px;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* For nested lists */
+.markdown ul ul,
+.markdown ul ol,
+.markdown ol ul,
+.markdown ol ol {
+  margin-bottom: 0;
+}
+
+.markdown figure img {
+  margin: 0;
+}
+
+.markdown figure figcaption {
+  font-size: small;
+  font-style: italic;
 }
