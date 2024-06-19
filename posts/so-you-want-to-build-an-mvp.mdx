@@ -273,6 +273,12 @@ Tasks should be roughly ordered by how soon they can/should be done. Tasks that 
 
 Developers can either grab a new task when they finish their previous one (Kanban), or developers can be assigned tasks on a weekly or bi-weekly basis (Agile).
 
+#### Architecture
+
+It is important that your app implementation is stateless - all state should be stored in a database, so that worker services (whether microservice based or monolith based doesn't matter) can be spun up and down on demand - not only to scale horizontally, but to quickly recover from bad states. Not doing so will lead to regrets down the line.
+
+Use the ["Twelve Factor App"](https://12factor.net/) as a guideline.
+
 #### CI/CD
 
 Tasks to set up a system to "automatically test and internally publish the latest changes" (aka CI/CD, Continuous Integration / Continuous Deployment) should be done as soon as there is something to test or internally publish (even if it's a blank page). This will start you on the right track, as CI/CD are painful to add later in a project's life.
